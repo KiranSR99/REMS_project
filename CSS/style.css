@@ -1,4 +1,255 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --sixty: #EFEFEF;
+    --thirty: #0A3454;
+    --ten: #FF7F50;
+    --text_color: #565656;
+}
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.btn {
+    background-color: var(--thirty);
+    color: #fff !important;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 3px;
+    padding: 8px 15px;
+}
+
+.btn:hover {
+    background-color: #fff;
+    border: 1px solid var(--thirty);
+    color: var(--thirty) !important;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 50px;
+}
+
+.title{
+    color: var(--thirty);
+    font-size: 24px;
+    text-align: center;
+}
+.card {
+    display: flex;
+    border-radius: 10px;
+    background-color: var(--sixty);
+    margin-bottom: 40px;
+}
+
+.column-1 img {
+    width: 670px;
+    height: 500px;
+}
+
+.column-2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.column-2 h1 {
+    color: var(--thirty);
+    margin-bottom: 10px;
+}
+
+.column-2 p {
+    color: var(--text_color);
+    margin-bottom: 10px;
+    padding: 0 40px;
+}
+
+
+/*=============== HEADER PART ===============*/
+.header {
+    margin: 0 50px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.logo {
+    position: relative;
+    top: 33%;
+    float: left;
+    margin-right: 20px;
+}
+
+.logo img {
+    width: 90px;
+}
+
+.menus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-container ul {
+    display: flex;
+    align-items: center;
+}
+
+.menu-container ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.number {
+    border-right: 1px solid var(--thirty);
+    padding: 5px;
+}
+
+.contact-container ul {
+    display: flex;
+    align-items: center;
+
+}
+
+.contact-container ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.menu-container li a {
+    color: var(--thirty);
+    font-weight: 500;
+}
+
+.contact-container li a {
+    color: var(--thirty);
+    font-weight: 700;
+}
+
+
+/*=============== END HEADER PART ===============*/
+
+.banner {
+    position: relative;
+    z-index: -1;
+}
+
+.banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.banner-text h4 {
+    font-size: 20px;
+}
+
+.banner-text h1 {
+    font-size: 48px;
+    font-family: 'Clash Display';
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    /* text-stroke: 2px #fff; */
+}
+
+.banner-text .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+
+.introduction {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.introduction h1 {
+    font-size: 30px;
+    color: var(--thirty);
+}
+
+.introduction p {
+    font-size: 18px;
+    color: var(--text_color);
+}
+
+/* =============== MID BANNER =============== */
+.mid-banner {
+    position: relative;
+    z-index: -1;
+}
+
+.mid-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.mid-banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.mid-banner-text h4 {
+    font-size: 20px;
+}
+
+.mid-banner-text h1 {
+    font-size: 48px;
+    font-family: 'Clash Display';
+}
+
+.mid-banner-text .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+/* ===============END MID BANNER =============== */
+
+.offer {
+    margin: 40px 0 20px;
+    display: flex;
+    align-items: center;
+    color: var(--thirty);
+}
+
+.offer img {
+    margin-right: 10px;
 }
