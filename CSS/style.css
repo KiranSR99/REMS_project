@@ -57,10 +57,10 @@ ul {
     margin-bottom: 40px;
 }
 
-.column-1 img {
+/* .column-1 img {
     width: 670px;
     height: 500px;
-}
+} */
 
 .column-2 {
     display: flex;
