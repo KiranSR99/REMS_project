@@ -1,3 +1,5 @@
+/* =============== ALL GENERAL CSS =============== */
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
@@ -84,8 +86,10 @@ ul {
     padding: 0 40px;
 }
 
+/* =============== END ALL GENERAL CSS =============== */
 
-/*=============== HEADER PART ===============*/
+/* =============== CSS FOR HEADER PAGE =============== */
+/* =============== CSS FOR HEADER PAGE STARTS FROM HERE =============== */
 .header {
     margin: 0 50px;
     height: 65px;
@@ -142,13 +146,117 @@ ul {
     font-weight: 500;
 }
 
+.menu-container li a:hover {
+    color: var(--ten);
+}
+
 .contact-container li a {
     color: var(--thirty);
     font-weight: 700;
 }
 
+/* =============== END CSS FOR HEADER PAGE =============== */
+/* =============== CSS FOR HEADER PAGE ENDS HERE =============== */
 
-/*=============== END HEADER PART ===============*/
+
+
+/* =============== CSS FOR FOOTER PAGE =============== */
+/* =============== CSS FOR HEADER PAGE STARTS FROM HERE =============== */
+.footer {
+    background-color: var(--sixty);
+    padding: 20px 0;
+    color: var(--thirty);
+    line-height: 1.5;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-footer {
+    position: relative;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.title-footer::after {
+    position: absolute;
+    content: "";
+    height: 5px;
+    background-color: var(--thirty);
+    width: 100px;
+    left: 0%;
+    top: 100%;
+    margin-bottom: 10px;
+}
+
+.footer-column li a {
+    color: var(--thirty);
+}
+
+.footer-column li a:hover {
+    color: var(--ten);
+}
+
+.footer-column input {
+    border: none;
+    outline: none;
+    padding: 5px 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--sixty);
+    border-bottom: 1px solid var(--thirty);
+}
+
+.footer-column input:focus {
+    border-bottom: 1px solid var(--ten);
+}
+
+.footer-column .btn-small {
+    background-color: var(--thirty);
+    border: none;
+    margin: 5px 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.footer-column .btn-small:hover {
+    background-color: #fff;
+    border: 1px solid var(--thirty);
+    color: var(--thirty);
+}
+
+.footer-column .social-links li {
+    display: inline-block;
+    margin: 2px;
+    margin-top: 30px;
+}
+
+hr {
+    margin: 30px 0 10px;
+    border-color: var(--thirty);
+}
+
+.copyright {
+    text-align: center;
+}
+
+.copyright a {
+    color: var(--ten);
+}
+
+/* =============== END CSS FOR HEADER PAGE =============== */
+/* =============== CSS FOR HEADER PAGE ENDS FROM HERE =============== */
+
+
+
+
+/* =============== CSS FOR INDEX PAGE =============== */
+/* =============== CSS FOR INDEX PAGE STARTS FROM HERE =============== */
 
 
 /*=============== BANNER PART ===============*/
@@ -217,6 +325,7 @@ ul {
     width: 100%;
     height: 700px;
 }
+
 .carousel-prev,
 .carousel-next {
     position: absolute;
@@ -229,11 +338,12 @@ ul {
     border-radius: 50%;
     transition: background-color 0.3s ease;
 }
-.carousel-next{
+
+.carousel-next {
     right: 0;
 }
-/* ----- END BANNER CAROUSEL ----- */
 
+/* ----- END BANNER CAROUSEL ----- */
 
 /*=============== END BANNER PART ===============*/
 
@@ -310,6 +420,9 @@ ul {
     margin-right: 10px;
 }
 
+/*=============== END OFFER PART ===============*/
+
+
 /*========== PACKAGES ==========*/
 .column img {
     width: 670px;
@@ -376,86 +489,5 @@ ul {
 
 /*========== END PACKAGES ==========*/
 
-
-/* =============== FOOTER PART ==========*/
-.footer {
-    background-color: var(--sixty);
-    padding: 20px 0;
-    color: var(--thirty);
-    line-height: 1.5;
-}
-
-#footer {
-    display: flex;
-    justify-content: space-between;
-}
-.title-footer{
-    position: relative;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-.title-footer::after{
-    position: absolute;
-    content: "";
-    height: 5px;
-    background-color: var(--thirty);
-    width: 100px;
-    left: 0%;
-    top: 100%;
-    margin-bottom: 10px;
-}
-.footer-column li a {
-    color: var(--thirty);
-}
-
-.footer-column li a:hover {
-    color: var(--ten);
-}
-
-.footer-column input {
-    border: none;
-    outline: none;
-    padding: 5px 0;
-    font-family: 'Open Sans', sans-serif;
-    background-color: var(--sixty);
-    border-bottom: 1px solid var(--thirty);
-}
-
-.footer-column input:focus {
-    border-bottom: 1px solid var(--ten);
-}
-
-.footer-column .btn-small {
-    background-color: var(--thirty);
-    border: none;
-    margin: 5px 0;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 3px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-.footer-column .btn-small:hover {
-    background-color: #fff;
-    border: 1px solid var(--thirty);
-    color: var(--thirty);
-}
-.footer-column .social-links li{
-    display: inline-block;
-    margin: 2px;
-    margin-top: 30px;
-}
-
-hr{
-    margin: 30px 0 10px;
-    border-color: var(--thirty);
-}
-.copyright{
-    text-align: center;
-}
-.copyright a{
-    color: var(--ten);
-}
-/* =============== END FOOTER PART ==========*/
+/* =============== END CSS FOR INDEX PAGE =============== */
+/* =============== CSS FOR INDEX PAGE ENDS HERE =============== */
