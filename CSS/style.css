@@ -62,10 +62,11 @@ ul {
     margin-bottom: 40px;
 }
 
-/* .column-1 img {
-    width: 670px;
-    height: 500px;
-} */
+.column-1 img {
+    width: 625px;
+    height: auto;
+    border-radius: 10px 0 0 10px;
+}
 
 .column-2 {
     display: flex;
@@ -84,6 +85,38 @@ ul {
     color: var(--text_color);
     margin-bottom: 10px;
     padding: 0 40px;
+}
+
+.card-reverse {
+    display: flex;
+    border-radius: 10px;
+    background-color: var(--sixty);
+    margin-bottom: 40px;
+}
+
+.card-reverse-column-1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-reverse-column-1 h1 {
+    color: var(--thirty);
+    margin-bottom: 10px;
+}
+
+.card-reverse-column-1 p {
+    color: var(--text_color);
+    margin-bottom: 10px;
+    padding: 0 40px;
+}
+
+.card-reverse-column-2 img {
+    border-radius: 0 10px 10px 0;
+    width: 625px;
+
 }
 
 /* =============== END ALL GENERAL CSS =============== */
@@ -161,7 +194,7 @@ ul {
 
 
 /* =============== CSS FOR FOOTER PAGE =============== */
-/* =============== CSS FOR HEADER PAGE STARTS FROM HERE =============== */
+/* =============== CSS FOR FOOTER PAGE STARTS FROM HERE =============== */
 .footer {
     background-color: var(--sixty);
     padding: 20px 0;
@@ -491,3 +524,107 @@ hr {
 
 /* =============== END CSS FOR INDEX PAGE =============== */
 /* =============== CSS FOR INDEX PAGE ENDS HERE =============== */
+
+
+/* =============== CSS FOR EVENTS PAGE =============== */
+/* =============== CSS FOR EVENTS PAGE STARTS HERE =============== */
+
+.exclude {
+    border-radius: 10px;
+}
+
+.custom-event {
+    margin-bottom: 20px;
+}
+
+/* =============== END CSS FOR EVENTS PAGE =============== */
+/* =============== CSS FOR EVENTS PAGE ENDS HERE =============== */
+
+/* =============== CSS FOR GALLERY PAGE =============== */
+/* =============== CSS FOR GALLERY PAGE STARTS HERE =============== */
+.intro {
+    background-color: var(--sixty) !important;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.sub-menu-list {
+    display: flex;
+    justify-content: center;
+}
+
+.sub-menu-list .menu-container ul li {
+    margin: 0 40px;
+}
+
+.sub-menu-list .menu-container ul li a {
+    font-weight: 600;
+}
+
+.grid-item img{
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+}
+.grid-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.grid-container>* {
+    grid-row-gap: 20px;
+}
+
+
+/* =============== END CSS FOR GALLERY PAGE =============== */
+/* =============== CSS FOR GALLERY PAGE ENDS HERE =============== */
+
+
+/* =============== CSS FOR CONTACT US PAGE =============== */
+/* =============== CSS FOR CONTACT US PAGE STARTS HERE =============== */
+.banner{
+    margin-bottom: 40px;
+}
+
+.contact-details{
+    padding: 20px;
+}
+.contact-details h1{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--thirty);
+}
+.contact-details p{
+    color: var(--text_color);
+    font-size: 16px;
+}
+.contact-info{
+    margin-top: 30px;
+    line-height: 1.8;
+}
+.contact{
+    border-radius: 0px;
+}
+.contact .column-1{
+    width: 670px;
+    padding: 40px;
+}
+.map{
+    border: 2px solid var(--thirty);
+}
+.fields{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+.fields input{
+    margin: 5px 0   ;
+}
+.contact h3,
+.contact p{
+    text-align: center;
+}
+/* =============== END CSS FOR CONTACT US PAGE =============== */
+/* =============== CSS FOR CONTACT US PAGE ENDS HERE =============== */
