@@ -128,7 +128,7 @@ ul {
     height: 65px;
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .logo {
@@ -164,6 +164,9 @@ ul {
 }
 
 .contact-container ul {
+    position: absolute;
+    right: 4%;
+    top: 3%;
     display: flex;
     align-items: center;
 
@@ -185,7 +188,13 @@ ul {
 
 .contact-container li a {
     color: var(--thirty);
-    font-weight: 700;
+    font-weight: 600;
+}
+.contact-container li a:hover{
+    color: var(--ten);
+}
+.contact-container i{
+    font-size: 22px;
 }
 
 /* =============== END CSS FOR HEADER PAGE =============== */
@@ -282,8 +291,8 @@ hr {
     color: var(--ten);
 }
 
-/* =============== END CSS FOR HEADER PAGE =============== */
-/* =============== CSS FOR HEADER PAGE ENDS FROM HERE =============== */
+/* =============== END CSS FOR FOOTER PAGE =============== */
+/* =============== CSS FOR FOOTER PAGE ENDS FROM HERE =============== */
 
 
 
@@ -605,14 +614,16 @@ hr {
     line-height: 1.8;
 }
 .contact{
+    align-items: center;
     border-radius: 0px;
+    height: 500px;
 }
 .contact .column-1{
     width: 670px;
     padding: 40px;
 }
 .map{
-    border: 2px solid var(--thirty);
+    border: 1px solid var(--thirty);
 }
 .fields{
     margin: 20px 0;
@@ -620,7 +631,39 @@ hr {
     flex-direction: column;
 }
 .fields input{
-    margin: 5px 0   ;
+    margin: 5px 0;
+    height: 30px;
+    border: 1px solid var(--thirty);
+    border-radius: 5px;
+    outline: none;
+    padding: 0 5px;
+    background: transparent;
+    font-family: 'Open Sans', sans-serif;
+}
+.fields textarea{
+    margin: 5px 0;
+    border: 1px solid var(--thirty);
+    border-radius: 5px;
+    outline: none;
+    padding: 0 5px;
+    background: transparent;
+    color: #565656;
+    font-family: 'Open Sans', sans-serif;
+    resize: none;
+}
+.fields input:focus{
+    border: 1px solid var(--ten);
+}
+.fields textarea:focus{
+    border: 1px solid var(--ten);
+}
+.contact form .btn{
+    border: none;
+    display: block;
+    margin: 0 auto;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
 }
 .contact h3,
 .contact p{
