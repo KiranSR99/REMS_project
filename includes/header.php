@@ -8,7 +8,8 @@
     <title>Hill Paradise Resort</title>
 
     <link rel="shortcut icon" href="./assets/images/HillParadise.png" type="image/x-icon">
-    <link rel="stylesheet" href="../CSS/style.css">
+    <!-- <link rel="stylesheet" href="../CSS/style.css"> -->
+    <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -17,7 +18,7 @@
         <header>
             <div class="header">
                 <div class="logo">
-                    <a href="#"><img src="../assets/images/HillParadise.png" alt="LOGO"></a>
+                    <a href="#"><img src="./assets/images/HillParadise.png" alt="LOGO"></a>
                 </div>
 
                 <div class="menus">
