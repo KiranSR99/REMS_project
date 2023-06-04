@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --sixty: #EFEFEF;
+    --thirty: #0A3454;
+    --ten: #FF7F50;
+    --text_color: #565656;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.header {
+    height: 65px;
+    background-color: var(--sixty);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img {
+    width: 90px;
+    position: absolute;
+    margin-left: 50px;
+    top: 0;
+}
+
+.header .admin-text {
+    margin-right: 80px;
+    font-weight: 700;
+    color: var(--thirty);
+}
+
+.side-navbar {
+    position: fixed;
+    z-index: -1;
+    height: 100%;
+    width: 260px;
+    background-color: var(--sixty);
+    padding: 50px;
+}
+
+.side-navbar span {
+    margin-right: 10px;
+}
+
+.side-navbar ul li a {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: var(--thirty);
+    font-weight: 500;
+}
+
+.side-navbar li a:hover{
+    /* background-color: var(--thirty); */
+    color: var();
+}

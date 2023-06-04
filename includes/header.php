@@ -9,6 +9,7 @@
 
     <link rel="shortcut icon" href="./assets/images/HillParadise.png" type="image/x-icon">
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -34,9 +35,9 @@
                     <div class="contact-container">
                         <ul>
                             <li><a class="number" href="#">9812345678</a></li>
-                            <li><a href="#"><img src="../assets/images/fb_icon.png" alt="fb"></a></li>
-                            <li><a href="#"><img src="../assets/images/insta_icon.png" alt="insta"></a></li>
-                            <li><a href="#"><img src="../assets/images/tiktok_icon.png" alt="tiktok"></a></li>
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
                         </ul>
                     </div>
                 </div>
