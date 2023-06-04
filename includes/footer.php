@@ -1,10 +1,3 @@
-<!-- <?php
-include 'header.php';
-?> -->
-
-<head>
-    <link rel="stylesheet" href="../CSS/style.css">
-</head>
 <section class="footer">
     <div class="container">
         <div id="footer">
@@ -49,7 +42,7 @@ include 'header.php';
 </main>
 
 
-<script src="../JS/script.js"></script>
+<script src="./JS/script.js"></script>
 </body>
 
 </html>

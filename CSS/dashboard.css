@@ -27,38 +27,22 @@ li {
     list-style: none;
 }
 
-.header {
-    height: 65px;
-    background-color: var(--sixty);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header img {
-    width: 90px;
-    position: absolute;
-    margin-left: 50px;
-    top: 0;
-}
-
-.header .admin-text {
-    margin-right: 80px;
-    font-weight: 700;
-    color: var(--thirty);
-}
-
 .side-navbar {
     position: fixed;
-    z-index: -1;
+    left: 0;
+    top: 0;
     height: 100%;
     width: 260px;
     background-color: var(--sixty);
-    padding: 50px;
+    padding: 80px 50px;
 }
 
 .side-navbar span {
     margin-right: 10px;
+}
+
+.side-navbar ul {
+    margin-top: 70px;
 }
 
 .side-navbar ul li a {
@@ -66,10 +50,138 @@ li {
     align-items: center;
     margin: 20px 0;
     color: var(--thirty);
-    font-weight: 500;
+    font-weight: 600;
 }
 
-.side-navbar li a:hover{
-    /* background-color: var(--thirty); */
-    color: var();
+.side-navbar li a:hover {
+    color: var(--ten);
+}
+
+.side-navbar .active {
+    color: var(--ten);
+}
+
+.main-content {
+    margin-left: 260px;
+}
+
+.header {
+    height: 65px;
+    background-color: var(--sixty);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header img {
+    width: 90px;
+    position: absolute;
+    margin-left: 50px;
+    top: 0;
+    left: -22%;
+}
+
+/* ========== CSS FOR SEARCH BOX STARTS HERE ========== */
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-input {
+    font-family: 'Open Sans', sans-serif;
+    padding: 8px 80px 8px 20px;
+    border: 1px solid var(--thirty);
+    background: transparent;
+    border-radius: 50px;
+    font-size: 16px;
+    outline: none;
+    width: 300px;
+    z-index: -1;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.search-input:focus{
+    border: 1px solid var(--ten);
+}
+
+.search-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: var(--thirty);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 0 50px 50px 0;
+    font-size: 16px;
+}
+
+.search-button i{
+    font-size: 20px;
+}
+
+.search-button:hover {
+    background-color: var(--ten);
+}
+
+.clear-button {
+    position: absolute;
+    top: 30%;
+    right: 42%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.clear-button img {
+    width: 16px;
+    height: 16px;
+}
+
+/* ========== CSS FOR SEARCH BOX ENDS HERE ========== */
+
+
+.header .admin-text {
+    margin-right: 80px;
+    font-weight: 700;
+    color: var(--thirty);
+}
+
+.main-content main {
+    margin-top: 30px;
+    padding: 0 20px;
+    min-height: calc(100vh - 30px);
+}
+
+.stat-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--thirty);
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+    line-height: 2;
+}
+
+.card i {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.card:last-child {
+    /* background: linear-gradient(to right, #0A3454 60%, #FF7F50); */
+    background: linear-gradient(to bottom right, #0A3454 30%, #FF7F50);
 }
