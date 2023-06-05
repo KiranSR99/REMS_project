@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REMS Dashboard</title>
-    <?php include './includes/links-dashboard.php'; ?>
 
 </head>
 
@@ -15,9 +14,10 @@
     <aside>
         <div class="side-navbar">
             <ul>
-                <li><a href="#" class="active"><span class="fas fa-tachometer-alt"></span><span>Dashboard</span></a>
+                <li><a href="dashboard.php" class="active"><span
+                            class="fas fa-tachometer-alt"></span><span>Dashboard</span></a>
                 </li>
-                <li><a href="#"><span class="fa fa-calendar-days"></span><span>Events</span></a></li>
+                <li><a href="events.php"><span class="fa fa-calendar-days"></span><span>Events</span></a></li>
                 <li><a href="#"><span class="fas fa-calendar-check"></span><span>Reservations</span></a></li>
                 <li><a href="#"><span class="fas fa-box"></span><span>Packages</span></a></li>
                 <li><a href="#"><span class="fas fa-chart-bar"></span><span>Analytics/Reports</span></a></li>
@@ -29,7 +29,7 @@
 
     <div class="main-content">
         <header class="header">
-            <div class="logo"><img src="./assets/images/HillParadise.png" alt="LOGO"></div>
+            <div class="logo"><img src="../assets/images/HillParadise.png" alt="LOGO"></div>
             <div class="search-container">
                 <input type="text" class="search-input" id="search-input" placeholder="Search...">
                 <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
