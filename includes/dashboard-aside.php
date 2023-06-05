@@ -6,10 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REMS Dashboard</title>
-
-    <link rel="stylesheet" href="./CSS/dashboard.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <?php include './includes/links-dashboard.php'; ?>
 
 </head>
 
@@ -37,7 +34,7 @@
                 <input type="text" class="search-input" id="search-input" placeholder="Search...">
                 <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
                 <button class="clear-button" id="clear-button" style="display: none;">
-                    <img src="./assets/images/close.png" alt="Clear">
+                    <img src="../assets/images/close.png" alt="Clear">
                 </button>
             </div>
             <div class="admin-text">
@@ -45,34 +42,7 @@
             </div>
         </header>
 
-        <main>
-            <div class="stat-cards">
-                <div class="card">
-                    <i class="fa-solid fa-users"></i>
-                    <h4>1234</h4>
-                    <P>Total Customers</P>
-                </div>
-                <div class="card">
-                    <i class="fas fa-calendar-check"></i>
-                    <h4>123</h4>
-                    <P>Reservations</P>
-                </div>
-                <div class="card">
-                    <i class="fas fa-dollar-sign"></i>
-                    <h4>Rs. 12345678.90</h4>
-                    <P>Total Revenues</P>
-                </div>
-                <div class="card">
-                    <i class="fas fa-clock"></i>
-                    <h4>Upcoming</h4>
-                    <P>Resort Packages</P>
-                </div>
-            </div>
-        </main>
     </div>
-
-    <script src="./JS/dashboard.js"></script>
-
 </body>
 
 </html>

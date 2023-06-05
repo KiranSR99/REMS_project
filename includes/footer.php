@@ -38,11 +38,3 @@
         </div>
     </div>
 </section>
-
-</main>
-
-
-<script src="./JS/script.js"></script>
-</body>
-
-</html>
