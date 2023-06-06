@@ -1,1 +1,0 @@
-# Resort-Event-Management-System
