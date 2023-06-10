@@ -1,3 +1,8 @@
+<?php
+include '../config/database.php';
+$table="events_tbl";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,73 +20,23 @@
     <?php include '../includes/dashboard-aside.php'; ?>
 
     <div class="main-content">
-        <div class=" container">
+        <div class="container">
             <div class="add-event">
                 <a href="add-event.php">Add Event</a>
             </div>
             <table>
                 <tr>
-                    <th>#</th>
+                    <th>Status</th>
+                    <th>ID</th>
                     <th>Event</th>
                     <th>Description</th>
                     <th colspan="2">Action</th>
                 </tr>
-                <tr class="clickable-row" data-href="another-page.html">
-                    <td>1</td>
-                    <td>Wedding</td>
-                    <td id="desc-column">Celebrate your love amidst enchanting beauty. Experience a dream wedding,
-                        where every
-                        detail
-                        is tailored to perfection. Create cherished memories that will last forever.</td>
-                    <td>
-                        <div class="buttons">
-                            <a href="edit-event.php">Edit</a>
-                            <a href="delete-event.php">Delete</a>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="clickable-row" data-href="another-page.html">
-                    <td>1</td>
-                    <td>Wedding</td>
-                    <td id="desc-column">Celebrate your love amidst enchanting beauty. Experience a dream wedding,
-                        where every
-                        detail
-                        is tailored to perfection. Create cherished memories that will last forever.</td>
-                    <td>
-                        <div class="buttons">
-                            <a href="#">Edit</a>
-                            <a href="#">Delete</a>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="clickable-row" data-href="another-page.html">
-                    <td>1</td>
-                    <td>Wedding</td>
-                    <td id="desc-column">Celebrate your love amidst enchanting beauty. Experience a dream wedding,
-                        where every
-                        detail
-                        is tailored to perfection. Create cherished memories that will last forever.</td>
-                    <td>
-                        <div class="buttons">
-                            <a href="#">Edit</a>
-                            <a href="#">Delete</a>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="clickable-row" data-href="another-page.html">
-                    <td>1</td>
-                    <td>Wedding</td>
-                    <td id="desc-column">Celebrate your love amidst enchanting beauty. Experience a dream wedding,
-                        where every
-                        detail
-                        is tailored to perfection. Create cherished memories that will last forever.</td>
-                    <td>
-                        <div class="buttons">
-                            <a href="#">Edit</a>
-                            <a href="#">Delete</a>
-                        </div>
-                    </td>
-                </tr>
+                <?php
+                $conn = new database();
+                $data = $conn->select($table,"*");
+                $conn->print_table($data);
+                ?>
             </table>
         </div>
     </div>
