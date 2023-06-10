@@ -340,3 +340,61 @@ li {
 }
 
 /* ========== CSS FOR DELETE PAGE ENDS HERE ========== */
+
+
+
+/* ========== CSS FOR LOGIN PAGE STARTS HERE ========== */
+.body-main{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.body-main .container{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+.body-main label{
+    display: block;
+    font-weight: 700;
+}
+
+.body-main input{
+    padding: 10px 60px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1.5px solid #0A3454;
+
+}
+
+.body-main h1{
+    color: #0A3454;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.body-main .login-submit{
+    display: flex;
+    margin: 0 auto;
+    color: #fff;
+    background-color: #0A3454;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: 700;
+    border: none;
+}
+
+.body-main .checkbox-row{
+    /* font-weight: 200; */
+    font-size: small;
+    color: #565656;
+}
+
+.body-main .checkbox-row span{
+    margin-left: 90px;
+}
+
+/* ========== CSS FOR LOGIN PAGE ENDS HERE ========== */
