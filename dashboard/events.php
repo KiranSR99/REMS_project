@@ -30,6 +30,7 @@ $table="events_tbl";
                     <th>ID</th>
                     <th>Event</th>
                     <th>Description</th>
+                    <th>Photo</th>
                     <th colspan="2">Action</th>
                 </tr>
                 <?php
