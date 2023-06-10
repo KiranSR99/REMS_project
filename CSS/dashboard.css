@@ -196,7 +196,8 @@ li {
     padding: 0 20px;
     min-height: calc(100vh - 30px);
 }
-.add-event a{
+
+.add-event a {
     float: left;
     margin: 0 5px 10px;
     background-color: #2dc42d;
@@ -205,6 +206,7 @@ li {
     border-radius: 5px;
     font-weight: 700;
 }
+
 .main-content table {
     /* border-collapse: separate;
     width: 100%;
@@ -251,9 +253,90 @@ li {
     background-color: var(--sixty);
 }
 
-.main-content table tr:hover{
+/* .main-content table tr:hover{
     background-color: var(--ten);
     cursor: pointer;
+} */
+
+
+/* ===== CSS FOR TOGGLE BUTTON ===== */
+.toggle-btn input {
+    display: none;
+}
+
+.toggle-btn label {
+    position: relative;
+    display: block;
+    width: 45px;
+    height: 20px;
+    background-color: #565656;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 200ms linear;
+}
+
+.toggle-btn label::before {
+    position: absolute;
+    content: "";
+    top: 51%;
+    left: 2px;
+    transform: translateY(-50%);
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: #fff;
+    transition: left 200ms linear;
+}
+
+.toggle-btn input:checked+label {
+    background-color: var(--thirty);
+}
+
+.toggle-btn input:checked+label::before {
+    left: 27px;
 }
 
 /* ========== CSS FOR EVENTS PAGE ENDS HERE ========== */
+
+
+/* ========== CSS FOR DELETE PAGE STARTS HERE ========== */
+.main-content .delete-form {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content .delete-form p{
+    margin-bottom: 10px;
+}
+
+.delete-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.delete-buttons a,
+.delete-buttons input[type="submit"] {
+    padding: 10px 30px;
+    background-color: #f44336;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.delete-buttons a{
+    text-decoration: none;
+    background-color: #2dc42d;
+}
+
+.delete-buttons button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ========== CSS FOR DELETE PAGE ENDS HERE ========== */
