@@ -11,8 +11,8 @@
             <div class="footer-column">
                 <h2 class="title-footer">Quick Links</h2>
                 <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Special Offers</a></li>
+                    <li><a href="contact.php">About Us</a></li>
+                    <li><a href="#special-offer">Special Offers</a></li>
                     <li><a href="#">Sitemap</a></li>
                 </ul>
             </div>
@@ -20,13 +20,12 @@
             <div class="footer-column">
                 <h2 class="title-footer">Newsletter</h2>
                 <input type="email" name="email" class="email" placeholder="Enter Your Email"><br>
-                <input class="btn-small" type="submit" value="Submit">
-
+                <button class="btn-small" type="submit">Submit</button>
                 <ul class="social-links">
-                    <li><a href="#"><img src="../assets/images/fb_icon.png" alt=""></a></li>
-                    <li><a href="#"><img src="../assets/images/insta_icon.png" alt=""></a></li>
-                    <li><a href="#"><img src="../assets/images/tiktok_icon.png" alt=""></a></li>
-                    <li><a href="#"><img src="../assets/images/tripAdvisor.png" alt=""></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <!-- <li><a href="#"><i class="fas fa-"></i></a></li> -->
                 </ul>
             </div>
         </div>

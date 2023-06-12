@@ -3,7 +3,7 @@ include '../config/database.php';
 $table = "events_tbl";
 
 $conn = new database();
-if(isset($_POST['save'])){
+if(isset($_POST['submit'])){
     $event = $_POST['event'];
     $description = $_POST['description'];
 
@@ -57,7 +57,7 @@ if(isset($_POST['save'])){
                     <input type="file" name="photo">
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Add Event">
+                    <input type="submit" name="submit" value="Add Event">
                 </div>
             </form>
         </div>

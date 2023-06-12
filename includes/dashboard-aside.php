@@ -29,7 +29,7 @@
 
     <div class="main-content">
         <header class="header">
-            <div class="logo"><img src="../assets/images/HillParadise.png" alt="LOGO"></div>
+            <div class="logo"><a href="../index.php"><img src="../assets/images/HillParadise.png" alt="LOGO"></a></div>
             <div class="search-container">
                 <input type="text" class="search-input" id="search-input" placeholder="Search...">
                 <button type="submit" class="search-button"><i class="fas fa-search"></i></button>

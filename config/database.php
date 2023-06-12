@@ -165,6 +165,7 @@ class database
             $eventStatus = $row['status'];
             $eventTitle = $row['event'];
             $eventDescription = $row['description'];
+            $eventPhoto = $row['photo'];
     
             echo '<tr>';
             // Hide toggle button if delete operation is requested
@@ -179,6 +180,7 @@ class database
             echo '<td>' . $eventId . '</td>';
             echo '<td>' . $eventTitle . '</td>';
             echo '<td>' . $eventDescription . '</td>';
+            echo '<td><img src="uploadedImages/' . $eventPhoto . '" alt="EventImage" width="100"></td>';
             // Hide edit and delete buttons if delete operation is requested
             if ($info !== "delete") {
                 echo '<td>';
