@@ -70,7 +70,7 @@
             </div>
         </div>
     </section>
-    <section class="offer">
+    <section id="special-offer">
         <div class="container">
             <div class="offer">
                 <img src="./assets/images/price-tag.png" width="40px" alt="">

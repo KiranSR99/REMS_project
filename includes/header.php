@@ -2,17 +2,17 @@
     <header>
         <div class="header">
             <div class="logo">
-                <a href="#"><img src="./assets/images/HillParadise.png" alt="LOGO"></a>
+                <a href="index.php"><img src="./assets/images/HillParadise.png" alt="LOGO"></a>
             </div>
 
             <div class="menus">
                 <div class="menu-container">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Packages</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="events.php">Events</a></li>
+                        <li><a href="packages.php">Packages</a></li>
+                        <li><a href="gallery.php">Gallery</a></li>
+                        <li><a href="contact.php">Contact Us</a></li>
                         <li><a class="btn" href="#">Reserve Now</a></li>
                     </ul>
                 </div>
