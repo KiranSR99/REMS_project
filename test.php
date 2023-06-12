@@ -1,30 +1,30 @@
 <!-- <?php
-include '../config/database.php';
+        include '../config/database.php';
 
-$db = new database();
+        $db = new database();
 
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['addEvent'])) {
-        $eventTitle = $_POST['eventTitle'];
-        $eventDescription = $_POST['eventDescription'];
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if (isset($_POST['addEvent'])) {
+                $eventTitle = $_POST['eventTitle'];
+                $eventDescription = $_POST['eventDescription'];
 
-        $db->insertEvent($eventTitle, $eventDescription);
-    } elseif (isset($_POST['updateEvent'])) {
-        $eventId = $_POST['eventId'];
-        $eventTitle = $_POST['eventTitle'];
-        $eventDescription = $_POST['eventDescription'];
+                $db->insertEvent($eventTitle, $eventDescription);
+            } elseif (isset($_POST['updateEvent'])) {
+                $eventId = $_POST['eventId'];
+                $eventTitle = $_POST['eventTitle'];
+                $eventDescription = $_POST['eventDescription'];
 
-        $db->updateEvent($eventId, $eventTitle, $eventDescription);
-    } elseif (isset($_POST['deleteEvent'])) {
-        $eventId = $_POST['eventId'];
+                $db->updateEvent($eventId, $eventTitle, $eventDescription);
+            } elseif (isset($_POST['deleteEvent'])) {
+                $eventId = $_POST['eventId'];
 
-        $db->deleteEvent($eventId);
-    }
-}
+                $db->deleteEvent($eventId);
+            }
+        }
 
-$events = $db->getAllEvents();
-?>
+        $events = $db->getAllEvents();
+        ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +59,7 @@ $events = $db->getAllEvents();
                     $eventStatus = $event['status'];
                     $eventTitle = $event['event'];
                     $eventDescription = $event['description'];
-                
+
                     // Generate the row dynamically
                     echo '<tr class="clickable-row" data-href="another-page.html">';
                     echo '<td>';
@@ -323,19 +323,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </tr>
                 <?php
                 include '../config/database.php';
-                
+
                 $query = "SELECT * FROM events_tbl";
                 $result = mysqli_query($conn, $query);
-                
+
                 if ($result) {
                     $count = 1;
-                
+
                     while ($row = mysqli_fetch_assoc($result)) {
                         $eventId = $row['id'];
                         $eventStatus = $row['status'];
                         $eventTitle = $row['event'];
                         $eventDescription = $row['description'];
-                    
+
                         // Generate the row dynamically
                         echo '<tr class="clickable-row" data-href="another-page.html">';
                         echo '<td>';
@@ -354,7 +354,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         echo '</div>';
                         echo '</td>';
                         echo '</tr>';
-                    
+
                         $count++;
                     }
                 }
