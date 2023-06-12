@@ -352,10 +352,14 @@ li {
     height: 100vh;
 }
 .body-main .container{
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 3px 3px  rgba(0, 0, 0, 0.25);
     background-color: #fff;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
+    width: 350px;
+}
+.row label{
+    color: var(--thirty);
 }
 .body-main label{
     display: block;
@@ -363,40 +367,56 @@ li {
 }
 
 .body-main input{
-    padding: 10px 60px;
+    padding: 0 10px;
+    height: 35px;
+    width: 100%;
     border-radius: 5px;
     border: none;
     outline: none;
     margin-bottom: 20px;
-    border: 1.5px solid #0A3454;
+    border: 1.5px solid var(--thirty);
 
 }
 
 .body-main h1{
-    color: #0A3454;
+    color: var(--thirty);
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
+}
+.body-main .checkbox-row{
+    font-size: small;
+    color: #565656;
+    display: flex;
+    justify-content: space-between;
+}
+.body-main .remember{
+    display: flex;
+}
+.body-main .remember input{
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
 }
 .body-main .login-submit{
     display: flex;
     margin: 0 auto;
     color: #fff;
-    background-color: #0A3454;
-    padding: 5px 10px;
+    background-color: var(--thirty);
+    padding: 8px 12px;
     border-radius: 3px;
     font-weight: 700;
     border: none;
+    cursor: pointer;
+}
+.body-main .login-submit:hover{
+    background-color: #fff;
+    border: 1px solid var(--thirty);
+    color: var(--thirty);
 }
 
-.body-main .checkbox-row{
-    /* font-weight: 200; */
-    font-size: small;
-    color: #565656;
-}
-
-.body-main .checkbox-row span{
-    margin-left: 90px;
+.body-main .checkbox-row a{
+    color: var(--thirty);
 }
 
 /* ========== CSS FOR LOGIN PAGE ENDS HERE ========== */
