@@ -354,19 +354,22 @@ li {
     background-color: #fff;
     padding: 15px;
     border-radius: 10px;
+    width: 300px;
 }
 .body-main label{
     display: block;
     font-weight: 700;
 }
 
-.body-main input{
-    padding: 10px 60px;
+.body-main input:not(input[type=checkbox]){
+    padding: 0px 10px;
     border-radius: 5px;
     border: none;
+    height: 30px;
     outline: none;
     margin-bottom: 20px;
     border: 1.5px solid #0A3454;
+    width: 100%;
 
 }
 
@@ -378,23 +381,44 @@ li {
 }
 .body-main .login-submit{
     display: flex;
-    margin: 0 auto;
+    margin: 15px auto 0;
     color: #fff;
     background-color: #0A3454;
-    padding: 5px 10px;
+    padding:8px 12px;
     border-radius: 3px;
     font-weight: 700;
     border: none;
+    cursor: pointer;
+    
 }
-
+.login-submit:hover {
+    background-color: #fff;
+    border: 1px solid var(--thirty);
+    color: var(--thirty);
+}
 .body-main .checkbox-row{
     /* font-weight: 200; */
     font-size: small;
     color: #565656;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.body-main .remember input{
+    height: 18px;
+    width: 18px;
+    margin: 5px;
 }
 
-.body-main .checkbox-row span{
-    margin-left: 90px;
+.body-main .remember{
+    display: flex;
+    align-items: center;
+
+}
+
+.body-main .checkbox-row a{
+    /* float: right; */
+    color: var(--thirty);
 }
 
 /* ========== CSS FOR LOGIN PAGE ENDS HERE ========== */
