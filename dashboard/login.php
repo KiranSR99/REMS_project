@@ -14,11 +14,11 @@
     <div class="container">
         <form action="#" method="post">
             <h1>Login</h1>
-            <div class="email-row">
+            <div class="row">
                 <label for="email">Email</label>
                 <input type="email" body-main>
             </div>
-            <div class="password-row">
+            <div class="row">
                 <label for="password">Password</label>
                 <input type="password" name="password">
             </div>
@@ -28,7 +28,6 @@
                     <span>Remember Me</span>
                 </div>
                 <a href="#">Forgot Password?</a>
-
             </div>
             <button class="login-submit" type="submit">LOGIN</button>
         </form>
