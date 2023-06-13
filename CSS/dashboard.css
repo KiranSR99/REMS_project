@@ -408,11 +408,13 @@ li {
     font-weight: 700;
     border: none;
     cursor: pointer;
+    border: 1px solid transparent;
 }
 .body-main .login-submit:hover{
     background-color: #fff;
     border: 1px solid var(--thirty);
     color: var(--thirty);
+    border-color: var(--thirty);
 }
 
 .body-main .checkbox-row a{

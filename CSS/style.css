@@ -36,13 +36,15 @@ ul {
     font-weight: 700;
     border-radius: 3px;
     padding: 8px 15px;
+    border: 1px solid transparent;
 }
 
 .btn:hover {
     background-color: #fff;
-    border: 1px solid var(--thirty);
+    border-color: var(--thirty);
     color: var(--thirty) !important;
 }
+
 
 .container {
     max-width: 100%;
@@ -266,12 +268,14 @@ ul {
     border-radius: 3px;
     padding: 5px 10px;
     cursor: pointer;
+    border: 1px solid transparent;
 }
 
 .footer-column .btn-small:hover {
     background-color: #fff;
     border: 1px solid var(--thirty);
     color: var(--thirty);
+    border-color: var(--thirty);
 }
 
 .footer-column .social-links li {
