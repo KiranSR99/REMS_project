@@ -13,9 +13,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -156,7 +153,7 @@ li {
     color: var(--thirty);
 }
 
-.main-content main {
+.main-content .container {
     margin-top: 30px;
     padding: 0 20px;
     min-height: calc(100vh - 30px);
@@ -191,11 +188,6 @@ li {
 
 
 /* ========== CSS FOR EVENTS PAGE STARTS HERE ========== */
-.main-content .container {
-    margin-top: 30px;
-    padding: 0 20px;
-    min-height: calc(100vh - 30px);
-}
 
 .add-event a {
     float: left;
@@ -216,7 +208,7 @@ li {
     border-collapse: separate;
     border-spacing: 0;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 100px;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -271,7 +263,7 @@ li {
     display: block;
     width: 45px;
     height: 20px;
-    background-color: #565656;
+    background-color: #c5bdbd;
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 200ms linear;
@@ -280,7 +272,7 @@ li {
 .toggle-btn label::before {
     position: absolute;
     content: "";
-    top: 51%;
+    top: 50%;
     left: 2px;
     transform: translateY(-50%);
     display: block;
@@ -311,7 +303,7 @@ li {
     align-items: center;
 }
 
-.main-content .delete-form p{
+.main-content .delete-form p {
     margin-bottom: 10px;
 }
 
@@ -331,7 +323,8 @@ li {
     border-radius: 4px;
     cursor: pointer;
 }
-.delete-buttons a{
+
+.delete-buttons a {
     text-decoration: none;
     background-color: #2dc42d;
 }
@@ -346,27 +339,30 @@ li {
 
 
 /* ========== CSS FOR LOGIN PAGE STARTS HERE ========== */
-.body-main{
+.body-main {
     display: grid;
     place-items: center;
     height: 100vh;
 }
-.body-main .container{
-    box-shadow: 3px 3px 3px 3px  rgba(0, 0, 0, 0.25);
+
+.body-main .container {
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.25);
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     width: 350px;
 }
-.row label{
+
+.row label {
     color: var(--thirty);
 }
-.body-main label{
+
+.body-main label {
     display: block;
     font-weight: 700;
 }
 
-.body-main input{
+.body-main input {
     padding: 0 10px;
     height: 35px;
     width: 100%;
@@ -378,27 +374,31 @@ li {
 
 }
 
-.body-main h1{
+.body-main h1 {
     color: var(--thirty);
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
 }
-.body-main .checkbox-row{
+
+.body-main .checkbox-row {
     font-size: small;
     color: #565656;
     display: flex;
     justify-content: space-between;
 }
-.body-main .remember{
+
+.body-main .remember {
     display: flex;
 }
-.body-main .remember input{
+
+.body-main .remember input {
     height: 18px;
     width: 18px;
     margin-right: 5px;
 }
-.body-main .login-submit{
+
+.body-main .login-submit {
     display: flex;
     margin: 0 auto;
     color: #fff;
@@ -410,15 +410,86 @@ li {
     cursor: pointer;
     border: 1px solid transparent;
 }
-.body-main .login-submit:hover{
+
+.body-main .login-submit:hover {
     background-color: #fff;
     border: 1px solid var(--thirty);
     color: var(--thirty);
     border-color: var(--thirty);
 }
 
-.body-main .checkbox-row a{
+.body-main .checkbox-row a {
     color: var(--thirty);
 }
 
 /* ========== CSS FOR LOGIN PAGE ENDS HERE ========== */
+
+
+
+/* ========== CSS FOR ADD EVENT PAGE STARTS HERE ========== */
+
+.container .event-form {
+    margin: 50px auto;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.25);
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.event-form h1 {
+    text-align: center;
+    color: var(--thirty);
+}
+
+.event-form form {
+    margin-top: 20px;
+}
+
+.event-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.event-form .form-group label {
+    color: var(--thirty);
+    font-weight: 600;
+}
+
+.event-form .form-group input,
+.event-form .form-group textarea {
+    border-radius: 5px;
+    border: 1px solid var(--thirty);
+    height: 35px;
+    outline: none;
+    padding: 5px 10px;
+}
+
+.event-form .form-group textarea {
+    height: 150px;
+    resize: none;
+}
+
+.event-form .form-group input:focus,
+.event-form .form-group textarea:focus {
+    border: 1px solid var(--ten);
+}
+.btn {
+    background-color: var(--thirty);
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+}
+
+.btn:hover {
+    background-color: #fff;
+    border-color: var(--thirty);
+    color: var(--thirty);
+}
+
+/* ========== CSS FOR ADD EVENT PAGE ENDS HERE ========== */

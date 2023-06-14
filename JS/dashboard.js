@@ -3,7 +3,6 @@
 const searchInput = document.getElementById("search-input");
 const clearButton = document.getElementById("clear-button");
 
-
 searchInput.addEventListener("input", function () {
     if (searchInput.value.length > 0) {
         clearButton.style.display = "block";
@@ -36,3 +35,4 @@ document.addEventListener("DOMContentLoaded", function () {
 console.log("Hello world!!!!!!!!");
 
 // JS FOR CLICKABLE ROW ENDS HERE
+

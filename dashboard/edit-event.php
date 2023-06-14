@@ -58,27 +58,27 @@ if (isset($_POST['submit'])) {
 
     <div class="main-content">
         <div class="container">
-            <h1>Update Event</h1>
-            <form method="POST" enctype="multipart/form-data" action="edit-event.php">
-                <div class="form-group">
-                    <label for="event_title">Event:</label>
-                    <input type="text" id="event_title" name="event" value="<?php echo isset($event) ? $event : ''; ?>"
-                        required>
-                </div>
-                <div class="form-group">
-                    <label for="event_description">Description:</label>
-                    <textarea id="event_description" name="description"
-                        required><?php echo isset($description) ? $description : ''; ?></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="event_description">Photo:</label>
-                    <input type="file" name="photo">
-                </div>
-                <div class="form-group">
+            <div class="event-form">
+                <h1>Update Event</h1>
+                <form method="POST" enctype="multipart/form-data" action="edit-event.php">
+                    <div class="form-group">
+                        <label for="event_title">Event:</label>
+                        <input type="text" id="event_title" name="event"
+                            value="<?php echo isset($event) ? $event : ''; ?>" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event_description">Description:</label>
+                        <textarea id="event_description" name="description"
+                            required><?php echo isset($description) ? $description : ''; ?></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="event_description">Photo:</label>
+                        <input type="file" name="photo">
+                    </div>
                     <input type="hidden" name="id" value="<?php echo isset($id) ? $id : ''; ?>">
-                    <input type="submit" name="submit" value="Update Event">
-                </div>
-            </form>
+                    <input type="submit" class="btn" name="submit" value="Update Event">
+                </form>
+            </div>
         </div>
     </div>
 </body>
