@@ -16,7 +16,7 @@
     ?>
 
     <div class="main-content">
-        <main>
+        <div class="container">
             <div class="stat-cards">
                 <div class="card">
                     <i class="fa-solid fa-users"></i>
@@ -39,7 +39,7 @@
                     <P>Resort Packages</P>
                 </div>
             </div>
-        </main>
+        </div>
     </div>
 </body>
 

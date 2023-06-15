@@ -17,6 +17,7 @@ if(isset($_POST['submit'])){
         'description' => $description,
         'status' => 1,
         'photo' => $photo,
+        'is_visible' => 1
     ];
 
     $res = $conn->insert($table, $data);
@@ -42,24 +43,25 @@ if(isset($_POST['submit'])){
 
     <div class="main-content">
         <div class="container">
-            <h1>Add Event</h1>
-            <form method="POST" enctype="multipart/form-data" action="add-event.php">
-                <div class="form-group">
-                    <label for="event_title">Event:</label>
-                    <input type="text" id="event_title" name="event" required>
-                </div>
-                <div class="form-group">
-                    <label for="event_description">Description:</label>
-                    <textarea id="event_description" name="description" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="event_description">Photo:</label>
-                    <input type="file" name="photo">
-                </div>
-                <div class="form-group">
-                    <input type="submit" name="submit" value="Add Event">
-                </div>
-            </form>
+            <div class="event-form">
+                <h1>Add Event</h1>
+                <form method="POST" enctype="multipart/form-data" action="add-event.php">
+                    <div class="form-group">
+                        <label for="event_title">Event:</label>
+                        <input type="text" id="event_title" name="event" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event_description">Description:</label>
+                        <textarea id="event_description" name="description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="event_description">Photo:</label>
+                        <input type="file" name="photo">
+                    </div>
+                    <input type="submit" class="btn" name="submit" value="Add Event">
+
+                </form>
+            </div>
         </div>
     </div>
 
