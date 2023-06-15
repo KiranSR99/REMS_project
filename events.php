@@ -1,3 +1,8 @@
+<?php
+include './config/database.php';
+$table="events_tbl";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +35,7 @@
         </div>
     </section>
 
-    <section class="events">
+    <!-- <section class="events">
         <div class="container">
             <div class="card">
                 <div class="column-1">
@@ -95,7 +100,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <?php
+        $conn = new database();
+        $data = $conn->select($table,"*",$where = "status = 1");
+        $conn->print_card($data);
+    ?>
 
     <section class="events">
         <div class="container">

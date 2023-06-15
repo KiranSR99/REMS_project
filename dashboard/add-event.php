@@ -16,8 +16,7 @@ if(isset($_POST['submit'])){
         'event' => $event,
         'description' => $description,
         'status' => 1,
-        'photo' => $photo,
-        'is_visible' => 1
+        'photo' => $photo
     ];
 
     $res = $conn->insert($table, $data);

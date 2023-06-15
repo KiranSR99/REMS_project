@@ -1,4 +1,5 @@
 <?php
+include 'checkLogin.php';
 include '../config/database.php';
 $table="events_tbl";
 ?>
