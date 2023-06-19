@@ -13,6 +13,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -58,19 +61,23 @@ li {
     color: var(--ten);
 }
 
-.main-content {
+.main-content,
+.navbar {
     margin-left: 260px;
 }
 
-.header {
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .header {
     height: 65px;
     background-color: var(--sixty);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 .header img {
@@ -79,6 +86,27 @@ li {
     margin-left: 50px;
     top: 0;
     left: -22%;
+}
+
+.admin-text{
+    display: flex;
+    align-items: center;
+}
+
+.header .admin-text {
+    margin-right: 80px;
+    font-weight: 700;
+    color: var(--thirty);
+}
+
+.header .admin-text a i{
+    font-size: 30px;
+    padding-left: 20px;
+    color: var(--thirty);
+}
+
+.header .admin-text a i:hover{
+    color: var(--ten);
 }
 
 /* ========== CSS FOR SEARCH BOX STARTS HERE ========== */
@@ -146,12 +174,6 @@ li {
 
 /* ========== CSS FOR SEARCH BOX ENDS HERE ========== */
 
-
-.header .admin-text {
-    margin-right: 80px;
-    font-weight: 700;
-    color: var(--thirty);
-}
 
 .main-content .container {
     margin-top: 30px;
@@ -339,13 +361,13 @@ li {
 
 
 /* ========== CSS FOR LOGIN PAGE STARTS HERE ========== */
-.body-main {
+.form-body{
     display: grid;
     place-items: center;
     height: 100vh;
 }
 
-.body-main .container {
+.wrapper{
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.25);
     background-color: #fff;
     padding: 20px;
@@ -357,12 +379,12 @@ li {
     color: var(--thirty);
 }
 
-.body-main label {
+.wrapper label {
     display: block;
     font-weight: 700;
 }
 
-.body-main input {
+.wrapper input {
     padding: 0 10px;
     height: 35px;
     width: 100%;
@@ -371,34 +393,41 @@ li {
     outline: none;
     margin-bottom: 20px;
     border: 1.5px solid var(--thirty);
+    font-family: 'Open Sans', sans-serif;
 
 }
 
-.body-main h1 {
+.wrapper h1 {
     color: var(--thirty);
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
 }
 
-.body-main .checkbox-row {
+.wrapper p{
+    text-align: center;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.wrapper .checkbox-row {
     font-size: small;
     color: #565656;
     display: flex;
     justify-content: space-between;
 }
 
-.body-main .remember {
+.wrapper .remember {
     display: flex;
 }
 
-.body-main .remember input {
+.wrapper .remember input {
     height: 18px;
     width: 18px;
     margin-right: 5px;
 }
 
-.body-main .login-submit {
+.wrapper .login-submit {
     display: flex;
     margin: 0 auto;
     color: #fff;
@@ -411,17 +440,16 @@ li {
     border: 1px solid transparent;
 }
 
-.body-main .login-submit:hover {
+.wrapper .login-submit:hover {
     background-color: #fff;
     border: 1px solid var(--thirty);
     color: var(--thirty);
     border-color: var(--thirty);
 }
 
-.body-main .checkbox-row a {
+.wrapper .checkbox-row a {
     color: var(--thirty);
 }
-
 /* ========== CSS FOR LOGIN PAGE ENDS HERE ========== */
 
 
@@ -463,6 +491,7 @@ li {
     height: 35px;
     outline: none;
     padding: 5px 10px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .event-form .form-group textarea {
@@ -474,6 +503,7 @@ li {
 .event-form .form-group textarea:focus {
     border: 1px solid var(--ten);
 }
+
 .btn {
     background-color: var(--thirty);
     display: block;
@@ -484,6 +514,7 @@ li {
     border-radius: 3px;
     padding: 5px 10px;
     border: 1px solid transparent;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .btn:hover {

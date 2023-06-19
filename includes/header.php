@@ -1,5 +1,5 @@
 <main>
-    <header>
+    <header class="navbar">
         <div class="header">
             <div class="logo">
                 <a href="index.php"><img src="./assets/images/HillParadise.png" alt="LOGO"></a>

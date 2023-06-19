@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const bannerContainer = document.querySelector('.banner-container');
-    const banners = document.querySelectorAll('.banner');
-    const prevButton = document.querySelector('.carousel-prev');
-    const nextButton = document.querySelector('.carousel-next');
+document.addEventListener("DOMContentLoaded", function () {
+    const bannerContainer = document.querySelector(".banner-container");
+    const banners = document.querySelectorAll(".banner");
+    const prevButton = document.querySelector(".carousel-prev");
+    const nextButton = document.querySelector(".carousel-next");
     const bannerWidth = banners[0].offsetWidth;
     const cloneFirstBanner = banners[0].cloneNode(true);
     let currentIndex = 0;
@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function slideNext() {
         currentIndex++;
-        bannerContainer.style.transition = 'transform 0.5s ease';
+        bannerContainer.style.transition = "transform 0.5s ease";
         slideToIndex(currentIndex);
 
         if (currentIndex === banners.length) {
-            setTimeout(function() {
-                bannerContainer.style.transition = 'none';
+            setTimeout(function () {
+                bannerContainer.style.transition = "none";
                 currentIndex = 0;
                 slideToIndex(currentIndex);
             }, 500);
@@ -30,13 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
     function slidePrev() {
         if (currentIndex === 0) {
             currentIndex = banners.length;
-            bannerContainer.style.transition = 'none';
+            bannerContainer.style.transition = "none";
             slideToIndex(currentIndex);
         }
 
-        setTimeout(function() {
+        setTimeout(function () {
             currentIndex--;
-            bannerContainer.style.transition = 'transform 0.5s ease';
+            bannerContainer.style.transition = "transform 0.5s ease";
             slideToIndex(currentIndex);
         }, 50);
     }
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setInterval(slideNext, 3000);
     }
 
-    prevButton.addEventListener('click', slidePrev);
-    nextButton.addEventListener('click', slideNext);
+    prevButton.addEventListener("click", slidePrev);
+    nextButton.addEventListener("click", slideNext);
     startAutoSlide();
 });

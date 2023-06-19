@@ -27,7 +27,7 @@ class database
     }
 
     public function insert($table, $parameter = [])
-{
+    {
     $table_columns = implode(",", array_keys($parameter));
     $table_values = array_values($parameter);
 
@@ -122,57 +122,22 @@ class database
         return $results;
     }
 
-    // public function print_table($data, $info = ""){
-    //     echo '<table>';
-    //     echo '<tr>';
-    //     echo '<th>Status</th>';
-    //     echo '<th>ID</th>';
-    //     echo '<th>Event</th>';
-    //     echo '<th>Description</th>';
-    //     echo '<th colspan="2">Action</th>';
-    //     echo '</tr>';
-        
-    //     foreach ($data as $row) {
-    //         $eventId = $row['id'];
-    //         $eventStatus = $row['status'];
-    //         $eventTitle = $row['event'];
-    //         $eventDescription = $row['description'];
-        
-    //         echo '<tr>';
-    //         echo '<td>';
-    //         echo '<div class="toggle-btn">';
-    //         echo '<input type="checkbox" name="checkbox" id="toggle-button-' . $eventId . '" ' . ($eventStatus == 1 ? 'checked' : '') . '>';
-    //         echo '<label for="toggle-button-' . $eventId . '"></label>';
-    //         echo '</div>';
-    //         echo '</td>';
-    //         echo '<td>' . $eventId . '</td>';
-    //         echo '<td>' . $eventTitle . '</td>';
-    //         echo '<td>' . $eventDescription . '</td>';
-    //         echo '<td>';
-    //         echo '<div class="buttons">';
-    //         echo '<a href="edit-event.php?id=' . $eventId . '">Edit</a>';
-    //         echo '<a href="delete-event.php?id=' . $eventId . '">Delete</a>';
-    //         echo '</div>';
-    //         echo '</td>';
-    //         echo '</tr>';
-    //     }
-
-    // }
-
-    public function print_table($data, $info = "") {        
+    
+    public function print_table($data, $info = "")
+    {
         foreach ($data as $row) {
             $eventId = $row['id'];
-            $eventStatus = $row['status'];
+            $eventStatus = $row['status']; // Assuming the column name is 'status'
             $eventTitle = $row['event'];
             $eventDescription = $row['description'];
             $eventPhoto = $row['photo'];
-    
+        
             echo '<tr>';
             // Hide toggle button if delete operation is requested
             if ($info !== "delete") {
                 echo '<td>';
                 echo '<div class="toggle-btn">';
-                echo '<input type="checkbox" name="checkbox" id="toggle-button-' . $eventId . '" ' . ($eventStatus == 1 ? 'checked' : '') . '>';
+                echo '<input type="checkbox" name="checkbox" id="toggle-button-' . $eventId . '" ' . ($eventStatus == 1 ? 'checked' : '') . ' onchange="updateStatus(' . $eventId . ', this)">';
                 echo '<label for="toggle-button-' . $eventId . '"></label>';
                 echo '</div>';
                 echo '</td>';
@@ -180,7 +145,7 @@ class database
             echo '<td>' . $eventId . '</td>';
             echo '<td>' . $eventTitle . '</td>';
             echo '<td>' . $eventDescription . '</td>';
-            echo '<td><img src="uploadedImages/' . $eventPhoto. '" alt="EventPhoto" width="100"></td>';
+            echo '<td><img src="uploadedImages/' . $eventPhoto . '" alt="EventPhoto" width="100"></td>';
             // Hide edit and delete buttons if delete operation is requested
             if ($info !== "delete") {
                 echo '<td>';
@@ -192,11 +157,49 @@ class database
             }
             echo '</tr>';
         }
-        
+    }
+
+    public function print_card($data) {
+        $iteration = 0; // Initialize the iteration counter
+    
+        foreach ($data as $row) {
+            $eventTitle = $row['event'];
+            $eventDescription = $row['description'];
+            $eventPhoto = $row['photo'];
+    
+            echo '<section class="events">';
+            echo '<div class="container">';
+            
+            // Check the iteration count to determine the column positions
+            if ($iteration % 2 === 0) {
+                echo '<div class="card">';
+                echo '<div class="column-1"><img src="dashboard/uploadedImages/' . $eventPhoto . '" alt="EventPhoto"></div>';
+                echo '<div class="column-2">
+                        <h1>'.$eventTitle.'</h1>
+                        <p>'.$eventDescription.'</p>
+                        <a class="btn" href="#">Find Out More</a>
+                    </div>';
+                    echo '</div>';
+            } else {
+                echo '<div class="card-reverse">';
+                echo '<div class="card-reverse-column-1">
+                        <h1>'.$eventTitle.'</h1>
+                        <p>'.$eventDescription.'</p>
+                        <a class="btn" href="#">Find Out More</a>
+                    </div>';
+                echo '<div class="card-reverse-column-2"><img src="dashboard/uploadedImages/' . $eventPhoto . '" alt="EventPhoto"></div>';
+                echo '</div>';
+            }
+    
+            echo '</div>';
+            echo '</section>';
+    
+            $iteration++; // Increment the iteration counter
+        }
     }
     
-    
 
+    
 
     public function __destruct()
     {
@@ -204,8 +207,6 @@ class database
     }
 
 }
-
-
 
 
 ?>

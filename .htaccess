@@ -1,7 +1,13 @@
 RewriteEngine On
+RewriteBase /rems_project/
 
-# Route /login to the login.html file inside the dashboard folder
+# Route /login to the login.php file inside the dashboard folder
 RewriteRule ^login$ /rems_project/dashboard/login.php [L]
+
+# Route /index.php/login to the login.php file inside the dashboard folder
+RewriteRule ^index\.php/login$ /rems_project/dashboard/login.php [L]
+
+# Route /admin to the login.php file inside the dashboard folder
 RewriteRule ^admin$ /rems_project/dashboard/login.php [L]
 
 # All other requests go to the homepage

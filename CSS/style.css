@@ -47,8 +47,8 @@ ul {
 
 
 .container {
-    max-width: 100%;
-    margin: 0 50px 40px;
+    max-width: 1140px;
+    margin: 0 auto 40px;
 }
 
 .title {
@@ -56,17 +56,23 @@ ul {
     font-size: 24px;
     text-align: center;
 }
+.title h1{
+    font-size: 30px;
+}
 
-.card {
-    display: flex;
+.card,
+.card-reverse {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
     border-radius: 10px;
     background-color: var(--sixty);
     margin-bottom: 40px;
 }
 
 .column-1 img {
-    width: 625px;
-    height: auto;
+    width: 570px;
+    height: 400px;
     border-radius: 10px 0 0 10px;
 }
 
@@ -87,13 +93,6 @@ ul {
     color: var(--text_color);
     margin-bottom: 10px;
     padding: 0 40px;
-}
-
-.card-reverse {
-    display: flex;
-    border-radius: 10px;
-    background-color: var(--sixty);
-    margin-bottom: 40px;
 }
 
 .card-reverse-column-1 {
@@ -117,14 +116,15 @@ ul {
 
 .card-reverse-column-2 img {
     border-radius: 0 10px 10px 0;
-    width: 625px;
-
+    width: 570px;
+    height: 400px;
 }
 
 /* =============== END ALL GENERAL CSS =============== */
 
 /* =============== CSS FOR HEADER PAGE =============== */
 /* =============== CSS FOR HEADER PAGE STARTS FROM HERE =============== */
+
 .header {
     margin: 0 50px;
     height: 65px;
@@ -581,8 +581,8 @@ hr {
 }
 
 .grid-item img{
-    width: 400px;
-    height: 300px;
+    width: 366.66px;
+    height: 250px;
     border-radius: 10px;
 }
 .grid-container {
@@ -629,11 +629,15 @@ hr {
     height: 500px;
 }
 .contact .column-1{
-    width: 670px;
-    padding: 40px;
+    width: 570px;
+    padding: 0 50px;
+}
+
+.column-1 p{
+    font-size: 14px;
 }
 .map{
-    border: 1px solid var(--thirty);
+    border: 2px solid var(--thirty);
 }
 .fields{
     margin: 20px 0;
