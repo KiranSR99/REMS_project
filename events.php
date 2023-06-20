@@ -35,77 +35,10 @@ $table="events_tbl";
         </div>
     </section>
 
-    <!-- <section class="events">
-        <div class="container">
-            <div class="card">
-                <div class="column-1">
-                    <img src="./assets/images/weddingAtResort.png" alt="">
-                </div>
-                <div class="column-2">
-                    <h1>Wedding</h1>
-                    <p>Celebrate your love amidst enchanting beauty. Experience a dream wedding, where every detail
-                        is tailored to perfection. Create cherished memories that will last forever.</p>
-                    <a class="btn" href="#">Find Out More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="events">
-        <div class="container">
-            <div class="card-reverse">
-                <div class="card-reverse-column-1">
-                    <h1>Night Party</h1>
-                    <p>Experience electrifying nights at our resort's epic party events. Dance, celebrate, and create
-                        unforgettable memories in a vibrant atmosphere like no other. Let the energy ignite and make
-                        your
-                        night extraordinary.</p>
-                    <a class="btn" href="#">Find Out More</a>
-                </div>
-                <div class="card-reverse-column-2">
-                    <img src="./assets/images/full-shot-happy-senior-friends-night 1.png" alt="">
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="events">
-        <div class="container">
-            <div class="card">
-                <div class="column-1">
-                    <img src="./assets/images/asian-people-having-dinner-party 1.png" alt="">
-                </div>
-                <div class="column-2">
-                    <h1>Dinner Meeting</h1>
-                    <p>Enhance your dinner meetings at our resort. Indulge in gourmet cuisine while fostering productive
-                        discussions. Impeccable service and elegant venues create an unforgettable experience.</p>
-                    <a class="btn" href="#">Find Out More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="events">
-        <div class="container">
-            <div class="card-reverse">
-                <div class="card-reverse-column-1">
-                    <h1>Birthday Celebration</h1>
-                    <p>Celebrate in style at our resort's remarkable birthday parties. Memorable moments, exceptional
-                        service, and a vibrant atmosphere await. Let us make your special day unforgettable.</p>
-                    <a class="btn" href="#">Find Out More</a>
-                </div>
-                <div class="card-reverse-column-2">
-                    <img src="./assets/images/full-shot-happy-woman-playing-guitar 1.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <?php
         $conn = new database();
         $data = $conn->select($table,"*",$where = "status = 1");
-        $conn->print_card($data);
+        $conn->print_card($data, 'event', 'description', 'photo');
     ?>
 
     <section class="events">
