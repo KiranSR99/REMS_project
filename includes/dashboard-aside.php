@@ -1,4 +1,4 @@
-<?php include 'checkLogin.php'; ?>
+<!-- <?php include '../checkLogin.php'; ?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,13 +16,15 @@
     <aside>
         <div class="side-navbar">
             <ul>
-                <li id="dashboard"><a href="dashboard.php" class="active"><span
+                <li id="dashboard"><a href="http://localhost/rems_project/dashboard/dashboard.php" class="active"><span
                             class="fas fa-tachometer-alt"></span><span>Dashboard</span></a></li>
-                <li id="events"><a href="events.php"><span class="fa fa-calendar-days"></span><span>Events</span></a>
+                <li id="events"><a href="http://localhost/rems_project/dashboard/events/events.php"><span
+                            class="fa fa-calendar-days"></span><span>Events</span></a>
                 </li>
                 <li id="reservations"><a href="#"><span
                             class="fas fa-calendar-check"></span><span>Reservations</span></a></li>
-                <li id="packages"><a href="#"><span class="fas fa-box"></span><span>Packages</span></a></li>
+                <li id="packages"><a href="http://localhost/rems_project/dashboard/packages/packages.php"><span
+                            class="fas fa-box"></span><span>Packages</span></a></li>
                 <li id="analytics"><a href="#"><span class="fas fa-chart-bar"></span><span>Analytics/Reports</span></a>
                 </li>
                 <li id="messages"><a href="#"><span class="fas fa-envelope"></span><span>Messages</span></a></li>
@@ -34,17 +36,20 @@
 
     <div class="navbar">
         <header class="header">
-            <div class="logo"><a href="../index.php"><img src="../assets/images/HillParadise.png" alt="LOGO"></a></div>
+            <div class="logo"><a href="../index.php"><img
+                        src="http://localhost/rems_project/assets/images/HillParadise.png" alt="LOGO"></a>
+            </div>
             <div class="search-container">
                 <input type="text" class="search-input" id="search-input" placeholder="Search...">
                 <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
                 <button class="clear-button" id="clear-button" style="display: none;">
-                    <img src="../assets/images/close.png" alt="Clear">
+                    <img src="http://localhost/rems_project/assets/images/close.png" alt="Clear">
                 </button>
             </div>
             <div class="admin-text">
                 <p>Welcome, <?php echo $_SESSION['name']; ?> !</p>
-                <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i></a>
+                <a href="http://localhost/rems_project/dashboard/logout.php"><i
+                        class=" fa-solid fa-right-from-bracket"></i></a>
             </div>
         </header>
     </div>
