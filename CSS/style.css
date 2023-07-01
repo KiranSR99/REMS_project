@@ -56,7 +56,8 @@ ul {
     font-size: 24px;
     text-align: center;
 }
-.title h1{
+
+.title h1 {
     font-size: 30px;
 }
 
@@ -153,6 +154,7 @@ ul {
 .menu-container ul {
     display: flex;
     align-items: center;
+    margin-left: 50px;
 }
 
 .menu-container ul li {
@@ -161,7 +163,7 @@ ul {
 }
 
 .number {
-    border-right: 1px solid var(--thirty);
+    border-right: 2px solid var(--thirty);
     padding: 5px;
 }
 
@@ -192,10 +194,12 @@ ul {
     color: var(--thirty);
     font-weight: 600;
 }
-.contact-container li a:hover{
+
+.contact-container li a:hover {
     color: var(--ten);
 }
-.contact-container i{
+
+.contact-container i {
     font-size: 22px;
 }
 
@@ -297,7 +301,7 @@ hr {
     color: var(--ten);
 }
 
-.social-links i{
+.social-links i {
     font-size: 24px;
 }
 
@@ -580,11 +584,12 @@ hr {
     font-weight: 600;
 }
 
-.grid-item img{
+.grid-item img {
     width: 366.66px;
     height: 250px;
     border-radius: 10px;
 }
+
 .grid-container {
     margin-top: 20px;
     display: grid;
@@ -603,48 +608,56 @@ hr {
 
 /* =============== CSS FOR CONTACT US PAGE =============== */
 /* =============== CSS FOR CONTACT US PAGE STARTS HERE =============== */
-.banner{
+.banner {
     margin-bottom: 40px;
 }
 
-.contact-details{
+.contact-details {
     padding: 20px;
 }
-.contact-details h1{
+
+.contact-details h1 {
     font-size: 22px;
     font-weight: 700;
     color: var(--thirty);
 }
-.contact-details p{
+
+.contact-details p {
     color: var(--text_color);
     font-size: 16px;
 }
-.contact-info{
+
+.contact-info {
     margin-top: 30px;
     line-height: 1.8;
 }
-.contact{
+
+.contact {
     align-items: center;
     border-radius: 0px;
     height: 500px;
 }
-.contact .column-1{
+
+.contact .column-1 {
     width: 570px;
     padding: 0 50px;
 }
 
-.column-1 p{
+.column-1 p {
     font-size: 14px;
 }
-.map{
+
+.map {
     border: 2px solid var(--thirty);
 }
-.fields{
+
+.fields {
     margin: 20px 0;
     display: flex;
     flex-direction: column;
 }
-.fields input{
+
+.fields input {
     margin: 5px 0;
     height: 30px;
     border: 1px solid var(--thirty);
@@ -654,7 +667,8 @@ hr {
     background: transparent;
     font-family: 'Open Sans', sans-serif;
 }
-.fields textarea{
+
+.fields textarea {
     margin: 5px 0;
     border: 1px solid var(--thirty);
     border-radius: 5px;
@@ -665,13 +679,16 @@ hr {
     font-family: 'Open Sans', sans-serif;
     resize: none;
 }
-.fields input:focus{
+
+.fields input:focus {
     border: 1px solid var(--ten);
 }
-.fields textarea:focus{
+
+.fields textarea:focus {
     border: 1px solid var(--ten);
 }
-.contact form .btn{
+
+.contact form .btn {
     border: none;
     display: block;
     margin: 0 auto;
@@ -679,9 +696,103 @@ hr {
     font-weight: 600;
     text-align: center;
 }
+
 .contact h3,
-.contact p{
+.contact p {
     text-align: center;
 }
+
 /* =============== END CSS FOR CONTACT US PAGE =============== */
 /* =============== CSS FOR CONTACT US PAGE ENDS HERE =============== */
+
+
+/* =============== START CSS FOR PACKAGE-DETAIL US PAGE =============== */
+/* =============== CSS FOR PACKAGE-DETAIL US PAGE STARTS HERE =============== */
+
+.package-card {
+    background-color: var(--sixty);
+    margin-bottom: 40px;
+}
+
+.package-card .image-div {
+    max-width: 100vw;
+    height: 500px;
+}
+
+.package-card .image-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.package-card .text {
+    padding: 40px;
+    color: var(--thirty);
+}
+
+.package-card .text p{
+    margin-bottom: 30px;
+}
+.package-detail {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.package-detail .left,
+.package-detail .right {
+    padding:0 20px;
+}
+
+.package-detail h3 {
+    color: var(--thirty);
+    margin-left: -20px
+}
+
+.package-detail .left .feature {
+    margin: 25px 0;
+}
+
+.feature h4 {
+    color: var(--thirty);
+}
+
+.feature h4::before {
+    content: "\2022";
+    /* Unicode character for bullet point */
+    display: inline-block;
+    width: 20px;
+    margin-left: -20px;
+}
+
+.feature p {
+    margin-top: 5px;
+    font-style: italic;
+    color: var(--text_color);
+}
+
+.package-detail .right table{
+    margin-top: 50px;
+    border: 1px solid rgb(172, 169, 169);
+    border-collapse: collapse;
+}
+.right table th,
+.right table td{
+    padding: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.right table th{
+    color: var(--thirty);
+}
+
+.right table td{
+    color: var(--text_color);
+}
+
+.right tr:nth-child(even){
+    background-color: var(--sixty);
+}
+/* =============== END CSS FOR PACKAGE-DETAIL US PAGE =============== */
+/* =============== CSS FOR PACKAGE-DETAIL US PAGE ENDS HERE =============== */

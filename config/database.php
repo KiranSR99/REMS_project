@@ -105,22 +105,27 @@ class database
         return $return;
     }
 
-    public function select($table, $rows = "*", $where = null)
-    {
-        if ($where != null) {
-            $sql = "SELECT $rows FROM $table WHERE $where";
-        } else {
-            $sql = "SELECT $rows FROM $table";
-        }
+    public function select($table, $rows = "*", $where = null, $orderBy = null)
+{
+    $sql = "SELECT $rows FROM $table";
 
-        $result = $this->mysqli->query($sql);
-        $results = array();
-        while ($row = mysqli_fetch_assoc($result)) {
-            $results[] = $row;
-        }
-
-        return $results;
+    if ($where != null) {
+        $sql .= " WHERE $where";
     }
+
+    if ($orderBy != null) {
+        $sql .= " ORDER BY $orderBy";
+    }
+
+    $result = $this->mysqli->query($sql);
+    $results = array();
+    while ($row = mysqli_fetch_assoc($result)) {
+        $results[] = $row;
+    }
+
+    return $results;
+}
+
 
     
     public function print_table($data, $info = "", $columns = [], $deletePage = "", $editPage = "")

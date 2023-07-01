@@ -14,14 +14,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $results = $conn->select($table, "*", $where);
 
     if (!empty($results)) {
+        $admin_id = $results[0]['id'];
+        date_default_timezone_set('Asia/Kathmandu');
+        $login_date = date('Y-m-d H:i:s');
+
+        
         $_SESSION['name'] = $results[0]['name'];
+        $_SESSION['expiry_time'] = date('Y-m-d H:i:s', time() + (24 * 60 * 60));
+
+        // Inserting the login date into the loginHistory Table
+        
+        $data = [
+            'admin_id' => $admin_id,
+            'login_date' => $login_date
+        ];
+        $res = $conn->insert('adminloginhistory', $data);
+
+        // Updating the expiry time of login in admin_tbl
+        $expiry_time = $_SESSION['expiry_time'];
+        $update_data = [
+            'login_expiry' => $expiry_time
+        ];
+        $res = $conn->update('admin_tbl', $update_data, "id = $admin_id");
+
         header('Location: http://localhost/rems_project/dashboard/dashboard.php');
         exit();
 
         if (isset($_POST['remember'])) {
             setcookie('name', $results[0]['name'], time() + 7 * 24 * 60 * 60);
         }
-        
     } else {
         $error = "Invalid email or password!";
     }
