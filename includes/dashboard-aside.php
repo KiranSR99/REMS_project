@@ -36,7 +36,8 @@
 
     <div class="navbar">
         <header class="header">
-            <div class="logo"><a href="../index.php"><img
+            <div class="logo">
+                <a href="../index.php"><img class="logoImage"
                         src="http://localhost/rems_project/assets/images/HillParadise.png" alt="LOGO"></a>
             </div>
             <div class="search-container">
@@ -47,12 +48,34 @@
                 </button>
             </div>
             <div class="admin-text">
-                <p>Welcome, <?php echo $_SESSION['name']; ?> !</p>
-                <a href="http://localhost/rems_project/dashboard/logout.php"><i
-                        class=" fa-solid fa-right-from-bracket"></i></a>
+                <p><?php echo $_SESSION['name']; ?></p>
+                <div class="dropdown">
+                    <img class="avatar" src="http://localhost/rems_project/assets/images/user.png" alt="avatar"
+                        onclick="toggleDropdown()">
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="http://localhost/rems_project/dashboard/edit-profile.php">Edit Profile</a>
+                        <a href="http://localhost/rems_project/dashboard/login-history.php">Login History</a>
+                        <a href="#">Settings</a>
+                        <a href="http://localhost/rems_project/dashboard/logout.php">Logout</a>
+                    </div>
+                </div>
             </div>
         </header>
     </div>
+
+    <script>
+    function toggleDropdown() {
+        var dropdownMenu = document.getElementById('dropdownMenu');
+        dropdownMenu.classList.toggle('show');
+    }
+
+    window.addEventListener('click', function(event) {
+        var dropdownMenu = document.getElementById('dropdownMenu');
+        if (!event.target.matches('.avatar')) {
+            dropdownMenu.classList.remove('show');
+        }
+    });
+    </script>
 </body>
 
 </html>

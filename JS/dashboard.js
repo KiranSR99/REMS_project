@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // JS FOR SEARCH BOX ENDS HERE
 
+
+
 // JS FOR TOGGLE BUTTON VALUE CHANGE STARTS HERE
 function updateStatus(eventId, checkbox) {
     const status = checkbox.checked ? 1 : 0;
@@ -37,6 +39,8 @@ function updateStatus(eventId, checkbox) {
 }
 
 // JS FOR TOGGLE BUTTON VALUE CHANGE ENDS HERE
+
+
 
 //JAVASCRIPT TO TOGGLE ACTIVE MENU IN DASHBOARD STARTS HERE
 document.addEventListener("DOMContentLoaded", function () {
