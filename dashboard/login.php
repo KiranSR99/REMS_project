@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(isset($_SESSION['name'])){
+    header('location:http://localhost/rems_project/dashboard/dashboard.php ');
+}
 
 include '../config/database.php';
 $table = "admin_tbl";
@@ -13,12 +16,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $where = "email = '$email' AND password = '$password'";
     $results = $conn->select($table, "*", $where);
 
+
     if (!empty($results)) {
         $admin_id = $results[0]['id'];
         date_default_timezone_set('Asia/Kathmandu');
         $login_date = date('Y-m-d H:i:s');
 
         
+        $_SESSION['id'] = $admin_id;
         $_SESSION['name'] = $results[0]['name'];
         $_SESSION['expiry_time'] = date('Y-m-d H:i:s', time() + (24 * 60 * 60));
 

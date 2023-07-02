@@ -1,4 +1,9 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <?php
 include 'checkLogin.php';
 include '../config/database.php';
 $table = "adminLoginHistory";
@@ -6,6 +11,9 @@ $conn = new database();
 
 $login_expiry = "";
 $last_login_date = "";
+// $id = $_SESSION['id'];
+// echo $id;
+
 
 $expiryData = $conn->select("admin_tbl", "*");
 if (!empty($expiryData)) {
@@ -14,10 +22,7 @@ if (!empty($expiryData)) {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,7 +63,7 @@ if (!empty($expiryData)) {
 
                 <?php
                 $count = 1;
-                $data = $conn->select($table, "*", null, "login_id DESC");
+                $data = $conn->select($table, "*",null, "login_id DESC");
 
                 if ($data) {
                     foreach ($data as $row) {
