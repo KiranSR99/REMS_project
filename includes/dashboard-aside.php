@@ -1,4 +1,9 @@
-<!-- <?php include '../checkLogin.php'; ?> -->
+<?php 
+// include '../checkLogin.php';
+
+$admin_id = $_SESSION['id'];
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,8 +59,10 @@
                         onclick="toggleDropdown()">
                     <div class="dropdown-menu" id="dropdownMenu">
                         <a href="http://localhost/rems_project/dashboard/edit-profile.php">Edit Profile</a>
-                        <a href="http://localhost/rems_project/dashboard/login-history.php">Login History</a>
-                        <a href="#">Settings</a>
+                        <a
+                            href="http://localhost/rems_project/dashboard/login-history.php?admin_id=<?php echo $admin_id; ?>">Login
+                            History</a>
+                        <a href=" #">Settings</a>
                         <a href="http://localhost/rems_project/dashboard/logout.php">Logout</a>
                     </div>
                 </div>
