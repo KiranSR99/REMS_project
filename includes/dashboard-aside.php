@@ -1,6 +1,10 @@
 <?php 
 // include '../checkLogin.php';
 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 $admin_id = $_SESSION['id'];
 
 ?>

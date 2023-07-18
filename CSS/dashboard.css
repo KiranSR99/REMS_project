@@ -243,6 +243,18 @@ li {
     border-radius: 5px;
     font-weight: 700;
 }
+.add-feature button{
+    font-family: 'Open Sans', sans-serif;
+    float: left;
+    margin-left: 10px;
+    background-color: #2dc42d;
+    color: #fff;
+    padding: 7px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+}
 
 .main-content table {
     /* border-collapse: separate;
@@ -482,7 +494,7 @@ li {
 .container .event-form {
     margin: 50px auto;
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.25);
-    width: 500px;
+    width: 600px;
     padding: 20px;
     border-radius: 10px;
 }
@@ -494,6 +506,13 @@ li {
 
 .event-form form {
     margin-top: 20px;
+}
+
+.event-form .feature-and-desc{
+    background-color: var(--sixty);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
 }
 
 .event-form .form-group {
@@ -518,7 +537,7 @@ li {
 }
 
 .event-form .form-group textarea {
-    height: 150px;
+    height: 100px;
     resize: none;
 }
 
@@ -547,3 +566,48 @@ li {
 }
 
 /* ========== CSS FOR ADD EVENT PAGE ENDS HERE ========== */
+
+
+
+/* ========== CSS FOR ADD FEATURES PAGE STARTS HERE ========== */
+
+.add-feature .dropdown-package {
+    /* position: absolute;
+    top: 100%;
+    right: 5%; */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    display: none;
+}
+
+.add-feature .dropdown-package.show {
+    display: block;
+}
+
+.add-feature .dropdown-package a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: var(--thirty);
+}
+
+.add-feature .dropdown-package a:hover {
+    color: var(--ten);
+}
+
+.feature-and-desc textarea{
+    border: none !important;
+}
+
+.add-feature-form button{
+    margin: 10px 0;
+}
+
+.add-feature-form button:last-child{
+    display: block;
+    margin: 0 auto;
+}
+
+/* ========== CSS FOR ADD FEATURES PAGE ENDS HERE ========== */
