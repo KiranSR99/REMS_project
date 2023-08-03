@@ -1,55 +1,62 @@
 <?php
 session_start();
-if(isset($_SESSION['name'])){
-    header('location:http://localhost/rems_project/dashboard/dashboard.php ');
-}
 
 include '../config/database.php';
 $table = "admin_tbl";
 $conn = new database();
 
+if (isset($_SESSION['name'])) {
+    header('location:http://localhost/rems_project/dashboard/dashboard.php');
+    exit();
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'];
-    $password = md5($_POST['password']);
-    $error = "";
+    
+    $url = 'http://localhost:8000/login';
+    
+    $data = [
+        'email' => $_POST['email'],
+        'password' => $_POST['password']
+    ];
+    
+    $options = [
+        'http' => [
+            'header' => "Content-Type: application/x-www-form-urlencoded\r\n",
+            'method' => 'POST',
+            'content' => http_build_query($data)
+        ]
+    ];
+    
+    $context = stream_context_create($options);
+    $response = file_get_contents($url, false, $context);
+    $api_response = json_decode($response, true);
 
-    $where = "email = '$email' AND password = '$password'";
-    $results = $conn->select($table, "*", $where);
-
-
-    if (!empty($results)) {
-        $admin_id = $results[0]['id'];
-        date_default_timezone_set('Asia/Kathmandu');
-        $login_date = date('Y-m-d H:i:s');
-
+    if (isset($api_response['admin_id'])) {
         
-        $_SESSION['id'] = $admin_id;
-        $_SESSION['name'] = $results[0]['name'];
+        date_default_timezone_set('Asia/Kathmandu');
+
+        $_SESSION['id'] = $api_response['admin_id'];
+        $_SESSION['name'] = $api_response['admin_name'];
         $_SESSION['expiry_time'] = date('Y-m-d H:i:s', time() + (24 * 60 * 60));
 
-        // Inserting the login date into the loginHistory Table
-        
+        $admin_id = $_SESSION['id'];
+        $login_date = date('Y-m-d H:i:s');
+
         $data = [
             'admin_id' => $admin_id,
             'login_date' => $login_date
         ];
         $res = $conn->insert('adminloginhistory', $data);
-
-        // Updating the expiry time of login in admin_tbl
-        $expiry_time = $_SESSION['expiry_time'];
-        $update_data = [
-            'login_expiry' => $expiry_time
-        ];
-        $res = $conn->update('admin_tbl', $update_data, "id = $admin_id");
-
-        header('Location: http://localhost/rems_project/dashboard/dashboard.php');
+        
+        
+        header('location:http://localhost/rems_project/dashboard/dashboard.php');
         exit();
-
-        if (isset($_POST['remember'])) {
-            setcookie('name', $results[0]['name'], time() + 7 * 24 * 60 * 60);
-        }
-    } else {
-        $error = "Invalid email or password!";
+    }
+    elseif (isset($api_response['detail'])) {
+        $error = $api_response['detail'];
+    }
+    else {
+        $error = "Invalid email or password";
     }
 }
 ?>
@@ -68,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body class="form-body">
     <div class="wrapper">
-        <form action="#" method="post">
+        <form action="" method="post">
             <h1>Login</h1>
             <?php if (!empty($error)) : ?>
             <p><?php echo $error; ?></p>

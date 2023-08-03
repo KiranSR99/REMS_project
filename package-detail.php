@@ -1,3 +1,11 @@
+<?php
+include './dashboard/checkLogin.php';
+include './config/database.php';
+$table = "packages_tbl";
+$table2 = "package_features";
+$conn = new database();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,24 +21,25 @@
     <?php include './includes/header.php'; ?>
 
     <div class="package-card">
-        <div class="image-div">
-            <img src="./assets/images/islandResort.jpg" alt="Package Image">
-        </div>
-        <div class="text">
-            <h2>Relaxation Package</h2>
-            <p>Escape into a world of peace and tranquility and rediscover yourself through the Relaxation Package. The
-                treatments and activities have been designed to help you revive body and mind, offering the perfect
-                respite from a busy life.
-            </p>
-            <button class="btn" type="submit">Book Now</button>
-        </div>
+        <?php
+        $packageID = $_GET['packageID'];
+        $data = $conn->select($table, "*","id = $packageID");
+        foreach ($data as $row) {
+            echo "<div class='image-div'><img src='./dashboard/uploadedImages/" . $row['photo'] . "' alt='PackagePhoto'></div>";
+            echo "<div class='text'>";
+            echo "<h2>".$row['package']."</h2>";
+            echo "<p>".$row['description']."</p>";
+            echo "<button class='btn' type='submit'>Book Now</button>";
+            echo "</div>";
+        }
+        ?>
     </div>
 
     <div class="container">
         <div class="package-detail">
             <div class="left">
                 <h3>The package includes:</h3>
-                <div class="feature">
+                <!-- <div class="feature">
                     <h4>Private consultation with the Ayurvedic Doctor</h4>
                     <p>Consult our Ayurvedic Doctor to acquire knowledge of our ancient health care principles and
                         wisdom</p>
@@ -67,7 +76,28 @@
                         Rock
                         Salt Room, Garden of Nine Planets along with painting and pottery classes
                     </h4>
-                </div>
+                </div> -->
+
+
+                <?php
+                // $data2 = $conn->select($table2, "*", "id = $packageID");
+                
+                // Commented out the previous select() function call
+                
+                $sql = "SELECT f.feature, f.feature_desc FROM $table2 f WHERE f.package_id = $packageID";
+                
+                $result = $conn->mysqli->query($sql);
+                
+                if ($result) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<div class='feature'>";
+                        echo "<h4>" . $row['feature'] . "</h4>";
+                        echo "<p>" . $row['feature_desc'] . "</p>";
+                        echo "</div>";
+                    }
+                }
+                ?>
+
             </div>
             <div class="right">
                 <table rules="all">

@@ -8,7 +8,7 @@ class database
     private $password = "";
     private $dbname = "rems_project";
     private $result = [];
-    private $mysqli = "";
+    public $mysqli = "";
 
     public $sql;
 
@@ -185,7 +185,7 @@ class database
                 echo '<div class="column-2">
                         <h1>' . $title . '</h1>
                         <p>' . $description . '</p>
-                        <a class="btn" href="#">Find Out More</a>
+                        <a class="btn" href="package-detail.php?packageID='.$row['id'].'">Find Out More</a>
                     </div>';
                 echo '</div>';
             } else {
@@ -193,7 +193,7 @@ class database
                 echo '<div class="card-reverse-column-1">
                         <h1>' . $title . '</h1>
                         <p>' . $description . '</p>
-                        <a class="btn" href="#">Find Out More</a>
+                        <a class="btn" href="package-detail.php?packageID='.$row['id'].'">Find Out More</a>
                     </div>';
                 echo '<div class="card-reverse-column-2"><img src="dashboard/uploadedImages/' . $photo . '" alt="EventPhoto"></div>';
                 echo '</div>';
