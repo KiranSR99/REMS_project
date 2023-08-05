@@ -22,14 +22,14 @@ $conn = new database();
 
     <div class="package-card">
         <?php
-        $packageID = $_GET['packageID'];
+        $packageID = $_GET['package_id'];
         $data = $conn->select($table, "*","id = $packageID");
         foreach ($data as $row) {
             echo "<div class='image-div'><img src='./dashboard/uploadedImages/" . $row['photo'] . "' alt='PackagePhoto'></div>";
             echo "<div class='text'>";
             echo "<h2>".$row['package']."</h2>";
             echo "<p>".$row['description']."</p>";
-            echo "<button class='btn' type='submit'>Book Now</button>";
+            echo "<a href='reservation.php' class='btn' type='submit'>Book Now</a>";
             echo "</div>";
         }
         ?>

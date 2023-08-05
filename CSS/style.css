@@ -37,6 +37,7 @@ ul {
     border-radius: 3px;
     padding: 8px 15px;
     border: 1px solid transparent;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -706,8 +707,8 @@ hr {
 /* =============== CSS FOR CONTACT US PAGE ENDS HERE =============== */
 
 
-/* =============== START CSS FOR PACKAGE-DETAIL US PAGE =============== */
-/* =============== CSS FOR PACKAGE-DETAIL US PAGE STARTS HERE =============== */
+/* =============== START CSS FOR PACKAGE-DETAIL PAGE =============== */
+/* =============== CSS FOR PACKAGE-DETAIL PAGE STARTS HERE =============== */
 
 .package-card {
     background-color: var(--sixty);
@@ -794,5 +795,173 @@ hr {
 .right tr:nth-child(even){
     background-color: var(--sixty);
 }
-/* =============== END CSS FOR PACKAGE-DETAIL US PAGE =============== */
-/* =============== CSS FOR PACKAGE-DETAIL US PAGE ENDS HERE =============== */
+/* =============== END CSS FOR PACKAGE-DETAIL PAGE =============== */
+/* =============== CSS FOR PACKAGE-DETAIL PAGE ENDS HERE =============== */
+
+
+
+
+/* =============== START CSS FOR EVENT-DETAIL PAGE =============== */
+/* =============== CSS FOR EVENT-DETAIL PAGE ENDS HERE =============== */
+
+/* .event-detail .box{
+    width: 700px;
+} */
+
+.event-detail .event-price-info{
+    width: 100%;
+    background-color: var(--sixty);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.event-detail .event-price-info h3{
+    color: var(--thirty);
+    margin-bottom: 10px;
+}
+
+.event-detail .event-price-info .row{
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+
+/* .event-detail .event-price-info .row:last-child{
+    border-top: 1px solid var(--thirty);
+} */
+
+.event-detail .event-price-info .row p:first-child{
+    font-weight: 600;
+    color: var(--thirty);
+}
+.event-detail .event-price-info .row p:last-child{
+    font-weight: 500;
+    color: var(--text_color);
+}
+
+.event-detail .event-price-info .field{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: 4%;
+}
+
+.event-detail .other-info{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: 4%;
+    width: 100%;
+    background-color: var(--sixty);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 50px 0;
+}
+
+.event-detail .other-info li{
+    position: relative;
+    padding-left: 40px;
+    list-style: none;
+    margin: 20px 0;
+    font-size: 20px;
+    color: var(--text_color);
+}
+
+.event-detail .other-info .checked::before,
+.event-detail .other-info .unchecked::before{
+    display: inline-block;
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.event-detail .other-info .checked::before{
+    background: url(../assets/images/checked.png) no-repeat;
+    background-size: cover;
+}
+
+.event-detail .other-info .unchecked::before{
+    background: url(../assets/images/uncheck.png) no-repeat;
+    background-size: cover;
+}
+
+/* =============== END CSS FOR EVENT-DETAIL PAGE =============== */
+/* =============== CSS FOR EVENT-DETAIL PAGE ENDS HERE =============== */
+
+
+/* =============== CSS FOR RESERVATION FORM STARTS HERE =============== */
+
+.reservation-form{
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--sixty);
+    margin: 20px auto;
+    width: 600px;
+    padding: 20px 50px;
+}
+
+.reservation-form a img{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 5%;
+    margin-bottom: 10px;
+}
+
+.reservation-form h2{
+    font-family:'Open Sans', sans-serif;
+    text-align: center;
+    margin: 40px 0 20px;
+    color: var(--thirty);
+}
+
+.reservation-form .row{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.reservation-form .row label{
+    color: var(--thirty);
+    font-weight: 600
+}
+
+.reservation-form .row input,
+.reservation-form .row textarea{
+    border: 1px solid var(--thirty);
+    border-radius: 5px;
+    outline: none;
+    height: 35px;
+    background: transparent;
+    padding: 0 10px;
+    font-family:'Open Sans', sans-serif;
+}
+
+.reservation-form .row textarea{
+    height: 200px;
+    padding-top: 5px;
+}
+
+.reservation-form .row input:focus,
+.reservation-form .row textarea:focus{
+    border: 1px solid var(--ten);
+}
+
+.reservation-form input[type=submit]{
+    display: block;
+    margin: 0 auto;
+    font-family:'Open Sans', sans-serif;
+}
+
+.reservation-form input[type=submit]:hover{
+    background-color: #fff;
+    border-color: var(--thirty);
+    color: var(--thirty) !important;
+}
+
+
+
+
+/* =============== CSS FOR RESERVATION FORM ENDS HERE =============== */

@@ -24,7 +24,7 @@ $table="packages_tbl";
     <?php
         $conn = new database();
         $data = $conn->select($table,"*",$where = "status = 1");
-        $conn->print_card($data, 'package', 'description', 'photo');
+        $conn->print_card($data, 'package', 'description', 'photo', 'packages', 'package_id');
     ?>
 
     <?php include './includes/footer.php'; ?>
