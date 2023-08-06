@@ -38,7 +38,7 @@ $table="events_tbl";
     <?php
         $conn = new database();
         $data = $conn->select($table,"*",$where = "status = 1");
-        $conn->print_card($data, 'event', 'description', 'photo');
+        $conn->print_card($data, 'event', 'description', 'photo', 'events', 'event_id');
     ?>
 
     <section class="events">

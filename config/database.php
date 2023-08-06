@@ -167,44 +167,48 @@ class database
 
 
 
-    public function print_card($data, $titleColumn, $descriptionColumn, $photoColumn)
-    {
-        $iteration = 0;
+public function print_card($data, $titleColumn, $descriptionColumn, $photoColumn, $pageType, $idColumnName)
+{
+    $iteration = 0;
 
-        foreach ($data as $row) {
-            $title = $row[$titleColumn];
-            $description = $row[$descriptionColumn];
-            $photo = $row[$photoColumn];
+    foreach ($data as $row) {
+        $title = $row[$titleColumn];
+        $description = $row[$descriptionColumn];
+        $photo = $row[$photoColumn];
 
-            echo '<section class="events">';
-            echo '<div class="container">';
+        $detailPage = ($pageType === 'events') ? 'event-detail.php' : 'package-detail.php';
 
-            if ($iteration % 2 === 0) {
-                echo '<div class="card">';
-                echo '<div class="column-1"><img src="dashboard/uploadedImages/' . $photo . '" alt="EventPhoto"></div>';
-                echo '<div class="column-2">
-                        <h1>' . $title . '</h1>
-                        <p>' . $description . '</p>
-                        <a class="btn" href="package-detail.php?packageID='.$row['id'].'">Find Out More</a>
-                    </div>';
-                echo '</div>';
-            } else {
-                echo '<div class="card-reverse">';
-                echo '<div class="card-reverse-column-1">
-                        <h1>' . $title . '</h1>
-                        <p>' . $description . '</p>
-                        <a class="btn" href="package-detail.php?packageID='.$row['id'].'">Find Out More</a>
-                    </div>';
-                echo '<div class="card-reverse-column-2"><img src="dashboard/uploadedImages/' . $photo . '" alt="EventPhoto"></div>';
-                echo '</div>';
-            }
+        echo '<section class="events">';
+        echo '<div class="container">';
 
+        if ($iteration % 2 === 0) {
+            echo '<div class="card">';
+            echo '<div class="column-1"><img src="dashboard/uploadedImages/' . $photo . '" alt="EventPhoto"></div>';
+            echo '<div class="column-2">
+                    <h1>' . $title . '</h1>
+                    <p>' . $description . '</p>
+                    <a class="btn" href="' . $detailPage . '?' . $idColumnName . '=' . $row['id'] . '">Find Out More</a>
+                </div>';
             echo '</div>';
-            echo '</section>';
-
-            $iteration++;
+        } else {
+            echo '<div class="card-reverse">';
+            echo '<div class="card-reverse-column-1">
+                    <h1>' . $title . '</h1>
+                    <p>' . $description . '</p>
+                    <a class="btn" href="' . $detailPage . '?' . $idColumnName . '=' . $row['id'] . '">Find Out More</a>
+                </div>';
+            echo '<div class="card-reverse-column-2"><img src="dashboard/uploadedImages/' . $photo . '" alt="EventPhoto"></div>';
+            echo '</div>';
         }
+
+        echo '</div>';
+        echo '</section>';
+
+        $iteration++;
     }
+}
+
+
     
 
     
