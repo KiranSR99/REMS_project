@@ -96,11 +96,11 @@ li {
     color: var(--thirty);
 }
 
-.header .admin-text p{
+.header .admin-text p {
     padding-right: 20px;
 }
 
-.header .admin-text .avatar{
+.header .admin-text .avatar {
     border-radius: 50px;
     width: 40px;
     height: 40px;
@@ -243,7 +243,8 @@ li {
     border-radius: 5px;
     font-weight: 700;
 }
-.add-feature button{
+
+.add-feature button {
     font-family: 'Open Sans', sans-serif;
     float: left;
     margin-left: 10px;
@@ -397,13 +398,13 @@ li {
 
 
 /* ========== CSS FOR LOGIN PAGE STARTS HERE ========== */
-.form-body{
+.form-body {
     display: grid;
     place-items: center;
     height: 100vh;
 }
 
-.wrapper{
+.wrapper {
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.25);
     background-color: #fff;
     padding: 20px;
@@ -440,7 +441,7 @@ li {
     margin-bottom: 10px;
 }
 
-.wrapper p{
+.wrapper p {
     text-align: center;
     color: red;
     margin-bottom: 20px;
@@ -486,6 +487,7 @@ li {
 .wrapper .checkbox-row a {
     color: var(--thirty);
 }
+
 /* ========== CSS FOR LOGIN PAGE ENDS HERE ========== */
 
 
@@ -509,7 +511,7 @@ li {
     margin-top: 20px;
 }
 
-.event-form .feature-and-desc{
+.event-form .feature-and-desc {
     background-color: var(--sixty);
     border-radius: 5px;
     padding: 20px;
@@ -598,17 +600,100 @@ li {
     color: var(--ten);
 }
 
-.feature-and-desc textarea{
+.feature-and-desc textarea {
     border: none !important;
 }
 
-.add-feature-form button{
+.add-feature-form button {
     margin: 10px 0;
 }
 
-.add-feature-form button:last-child{
+.add-feature-form button:last-child {
     display: block;
     margin: 0 auto;
 }
 
 /* ========== CSS FOR ADD FEATURES PAGE ENDS HERE ========== */
+
+
+/* ========== CSS FOR MESSAGE DETAILS PAGE STARTS HERE ========== */
+
+.messages {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.messages h2 {
+    text-align: center;
+    color: var(--thirty);
+    margin-bottom: 30px;
+}
+
+.message-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4%;
+    line-height: 1.5;
+}
+
+.message-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--sixty);
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.message-card b {
+    color: var(--thirty);
+}
+
+.message-card .msg {
+    margin-top: 10px;
+    background-color: #556080;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    flex-grow: 1;
+}
+
+.delete-btn {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    background-color: #f53e3e;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+    padding: 5px 10px;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.delete-btn a {
+    color: #fff;
+}
+
+.overlay {
+    background-color: rgba(255, 127, 80, 0.4);
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1;
+}
+
+.message-card:hover .delete-btn,
+.message-card:hover .overlay {
+    opacity: 1;
+    display: block;
+}
+
+/* ========== CSS FOR MESSAGE DETAILS PAGE ENDS HERE ========== */

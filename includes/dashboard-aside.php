@@ -30,13 +30,15 @@ $admin_id = $_SESSION['id'];
                 <li id="events"><a href="http://localhost/rems_project/dashboard/events/events.php"><span
                             class="fa fa-calendar-days"></span><span>Events</span></a>
                 </li>
-                <li id="reservations"><a href="#"><span
+                <li id="reservations"><a
+                        href="http://localhost/rems_project/dashboard/reservation/reservation.php"><span
                             class="fas fa-calendar-check"></span><span>Reservations</span></a></li>
                 <li id="packages"><a href="http://localhost/rems_project/dashboard/packages/packages.php"><span
                             class="fas fa-box"></span><span>Packages</span></a></li>
                 <li id="analytics"><a href="#"><span class="fas fa-chart-bar"></span><span>Analytics/Reports</span></a>
                 </li>
-                <li id="messages"><a href="#"><span class="fas fa-envelope"></span><span>Messages</span></a></li>
+                <li id="messages"><a href="http://localhost/rems_project/dashboard/message-details.php"><span
+                            class="fas fa-envelope"></span><span>Messages</span></a></li>
                 <li id="settings"><a href="#"><span class="fas fa-cog"></span><span>Settings</span></a></li>
             </ul>
         </div>

@@ -1,3 +1,32 @@
+<?php
+include './config/database.php';
+$table="message_tbl";
+$conn = new database();
+
+if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+
+    $data = [
+        'name' => $name,
+        'phone' => $phone,
+        'email' => $email,
+        'subject' => $subject,
+        'message' => $message
+    ];
+
+    $res = $conn->insert($table, $data);
+    if ($res == true) {
+        header('location:contact.php');
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,13 +83,13 @@
                         <p>Our team would be happy to assist you with any enquiries.</p>
 
                         <div class="fields">
-                            <input type="text" placeholder="Enter Your Name">
-                            <input type="text" placeholder="Enter Your Mobile Number">
-                            <input type="email" placeholder="Enter Your Email">
-                            <input type="text" placeholder="Subject">
+                            <input type="text" name="name" placeholder="Enter Your Name">
+                            <input type="text" name="phone" placeholder="Enter Your Mobile Number">
+                            <input type="email" name="email" placeholder="Enter Your Email">
+                            <input type="text" name="subject" placeholder="Subject">
                             <textarea name="message" id="" cols="30" rows="8" placeholder="Message">Message</textarea>
                         </div>
-                        <input class="btn" type="submit">
+                        <input class="btn" type="submit" name="submit" value="submit">
                     </form>
                 </div>
                 <div class="column-2 map">
