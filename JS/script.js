@@ -48,4 +48,21 @@ document.addEventListener("DOMContentLoaded", function () {
     prevButton.addEventListener("click", slidePrev);
     nextButton.addEventListener("click", slideNext);
     startAutoSlide();
+
+
+    // JAVASCRIPT TO TOGGLE THE ACTIVE CLASS IN NAVBAR MENUS
+    const menuItems = document.querySelectorAll(".menu-container li a");
+
+    menuItems.forEach(menuItem => {
+        menuItem.addEventListener('click', function () {
+
+            menuItems.forEach(menuItem => {
+                menuItem.classList.remove('active');
+            });
+
+            menuItem.classList.add('active');
+        });
+    });
+
+
 });

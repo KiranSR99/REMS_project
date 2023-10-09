@@ -185,8 +185,28 @@ ul {
 .menu-container li a {
     color: var(--thirty);
     font-weight: 500;
+    position: relative;
 }
 
+.menu-container li .active::before,
+.menu-container li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    bottom: -3px;
+    left: 50%;
+    height: 2px;
+    background-color: var(--thirty);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.menu-container li .active::before,
+.menu-container li a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.menu-container li .active,
 .menu-container li a:hover {
     color: var(--ten);
 }
@@ -732,9 +752,10 @@ hr {
     color: var(--thirty);
 }
 
-.package-card .text p{
+.package-card .text p {
     margin-bottom: 30px;
 }
+
 .package-detail {
     display: grid;
     grid-template-columns: 60% 40%;
@@ -742,7 +763,7 @@ hr {
 
 .package-detail .left,
 .package-detail .right {
-    padding:0 20px;
+    padding: 0 20px;
 }
 
 .package-detail h3 {
@@ -772,29 +793,31 @@ hr {
     color: var(--text_color);
 }
 
-.package-detail .right table{
+.package-detail .right table {
     margin-top: 50px;
     border: 1px solid rgb(172, 169, 169);
     border-collapse: collapse;
 }
+
 .right table th,
-.right table td{
+.right table td {
     padding: 20px;
     font-size: 14px;
     text-align: center;
 }
 
-.right table th{
+.right table th {
     color: var(--thirty);
 }
 
-.right table td{
+.right table td {
     color: var(--text_color);
 }
 
-.right tr:nth-child(even){
+.right tr:nth-child(even) {
     background-color: var(--sixty);
 }
+
 /* =============== END CSS FOR PACKAGE-DETAIL PAGE =============== */
 /* =============== CSS FOR PACKAGE-DETAIL PAGE ENDS HERE =============== */
 
@@ -808,7 +831,7 @@ hr {
     width: 700px;
 } */
 
-.event-detail .event-price-info{
+.event-detail .event-price-info {
     width: 100%;
     background-color: var(--sixty);
     padding: 20px;
@@ -816,12 +839,12 @@ hr {
     margin-bottom: 20px;
 }
 
-.event-detail .event-price-info h3{
+.event-detail .event-price-info h3 {
     color: var(--thirty);
     margin-bottom: 10px;
 }
 
-.event-detail .event-price-info .row{
+.event-detail .event-price-info .row {
     margin-bottom: 10px;
     padding: 10px 0;
 }
@@ -830,22 +853,23 @@ hr {
     border-top: 1px solid var(--thirty);
 } */
 
-.event-detail .event-price-info .row p:first-child{
+.event-detail .event-price-info .row p:first-child {
     font-weight: 600;
     color: var(--thirty);
 }
-.event-detail .event-price-info .row p:last-child{
+
+.event-detail .event-price-info .row p:last-child {
     font-weight: 500;
     color: var(--text_color);
 }
 
-.event-detail .event-price-info .field{
+.event-detail .event-price-info .field {
     display: grid;
     grid-template-columns: 48% 48%;
     gap: 4%;
 }
 
-.event-detail .other-info{
+.event-detail .other-info {
     display: grid;
     grid-template-columns: 48% 48%;
     gap: 4%;
@@ -856,7 +880,7 @@ hr {
     margin: 50px 0;
 }
 
-.event-detail .other-info li{
+.event-detail .other-info li {
     position: relative;
     padding-left: 40px;
     list-style: none;
@@ -866,7 +890,7 @@ hr {
 }
 
 .event-detail .other-info .checked::before,
-.event-detail .other-info .unchecked::before{
+.event-detail .other-info .unchecked::before {
     display: inline-block;
     content: "";
     width: 30px;
@@ -876,12 +900,12 @@ hr {
     top: 0;
 }
 
-.event-detail .other-info .checked::before{
+.event-detail .other-info .checked::before {
     background: url(../assets/images/checked.png) no-repeat;
     background-size: cover;
 }
 
-.event-detail .other-info .unchecked::before{
+.event-detail .other-info .unchecked::before {
     background: url(../assets/images/uncheck.png) no-repeat;
     background-size: cover;
 }
@@ -892,7 +916,7 @@ hr {
 
 /* =============== CSS FOR RESERVATION FORM STARTS HERE =============== */
 
-.reservation-form{
+.reservation-form {
     position: relative;
     border: none;
     border-radius: 5px;
@@ -902,7 +926,7 @@ hr {
     padding: 20px 50px;
 }
 
-.reservation-form a img{
+.reservation-form a img {
     position: absolute;
     width: 25px;
     height: 25px;
@@ -910,52 +934,52 @@ hr {
     margin-bottom: 10px;
 }
 
-.reservation-form h2{
-    font-family:'Open Sans', sans-serif;
+.reservation-form h2 {
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
     margin: 40px 0 20px;
     color: var(--thirty);
 }
 
-.reservation-form .row{
+.reservation-form .row {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
 
-.reservation-form .row label{
+.reservation-form .row label {
     color: var(--thirty);
     font-weight: 600
 }
 
 .reservation-form .row input,
-.reservation-form .row textarea{
+.reservation-form .row textarea {
     border: 1px solid var(--thirty);
     border-radius: 5px;
     outline: none;
     height: 35px;
     background: transparent;
     padding: 0 10px;
-    font-family:'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.reservation-form .row textarea{
+.reservation-form .row textarea {
     height: 200px;
     padding-top: 5px;
 }
 
 .reservation-form .row input:focus,
-.reservation-form .row textarea:focus{
+.reservation-form .row textarea:focus {
     border: 1px solid var(--ten);
 }
 
-.reservation-form input[type=submit]{
+.reservation-form input[type=submit] {
     display: block;
     margin: 0 auto;
-    font-family:'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.reservation-form input[type=submit]:hover{
+.reservation-form input[type=submit]:hover {
     background-color: #fff;
     border-color: var(--thirty);
     color: var(--thirty) !important;

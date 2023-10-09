@@ -34,7 +34,7 @@ li {
     height: 100%;
     width: 260px;
     background-color: var(--sixty);
-    padding: 80px 50px;
+    padding: 80px 0px;
 }
 
 .side-navbar span {
@@ -43,23 +43,41 @@ li {
 
 .side-navbar ul {
     margin-top: 70px;
+    
 }
+
+.side-navbar ul li{
+    padding: 10px 45px;
+}
+
+/* .side-navbar ul li:hover{
+    background-color: #0A3454;
+} */
 
 .side-navbar ul li a {
     display: flex;
     align-items: center;
-    margin: 20px 0;
     color: var(--thirty);
     font-weight: 600;
 }
 
-.side-navbar li a:hover {
-    color: var(--ten);
+.side-navbar ul li:hover {
+    background-color: var(--thirty);
 }
 
-.side-navbar .active {
-    color: var(--ten);
+.side-navbar li:hover a {
+    color: #fff;
 }
+
+
+.side-navbar .active {
+    background-color: var(--thirty);
+}
+
+.side-navbar .active a {
+    color: white;
+}
+
 
 .main-content,
 .navbar {

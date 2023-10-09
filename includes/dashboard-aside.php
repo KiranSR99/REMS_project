@@ -25,7 +25,7 @@ $admin_id = $_SESSION['id'];
     <aside>
         <div class="side-navbar">
             <ul>
-                <li id="dashboard"><a href="http://localhost/rems_project/dashboard/dashboard.php" class="active"><span
+                <li class="active" id="dashboard"><a href="http://localhost/rems_project/dashboard/dashboard.php"><span
                             class="fas fa-tachometer-alt"></span><span>Dashboard</span></a></li>
                 <li id="events"><a href="http://localhost/rems_project/dashboard/events/events.php"><span
                             class="fa fa-calendar-days"></span><span>Events</span></a>

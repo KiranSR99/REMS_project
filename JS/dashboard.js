@@ -52,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const messages = document.getElementById("messages");
     const settings = document.getElementById("settings");
 
-    // Add click event listeners to each list item
     dashboard.addEventListener("click", toggleActiveClass);
     events.addEventListener("click", toggleActiveClass);
     reservations.addEventListener("click", toggleActiveClass);
@@ -61,13 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
     messages.addEventListener("click", toggleActiveClass);
     settings.addEventListener("click", toggleActiveClass);
 
-    // Function to toggle the active class on clicked list item
     function toggleActiveClass(event) {
         const clickedItem = event.currentTarget;
-        // Remove the active class from all list items
         const listItems = document.querySelectorAll(".side-navbar ul li");
         listItems.forEach((item) => item.classList.remove("active"));
-        // Add the active class to the clicked list item
         clickedItem.classList.add("active");
     }
 });
