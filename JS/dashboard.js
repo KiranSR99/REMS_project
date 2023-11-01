@@ -70,6 +70,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //JAVASCRIPT TO TOGGLE ACTIVE MENU IN DASHBOARD ENDS HERE
 
+document.addEventListener("DOMContentLoaded", function() {
+    const currentPage = window.location.href;
+    const menuItems = document.querySelectorAll(".side-navbar li");
+
+    menuItems.forEach(menuItem => {
+        const link = menuItem.querySelector('a');
+        if (link.href === currentPage) {
+            menuItem.classList.add('active');
+        } else {
+            menuItem.classList.remove('active');
+        }
+    });
+});
+
+
+
 
 //JAVASCRIPT TO ADD INPUT FIELDS IN ADD FEATURE FORM STARTS HERE
 

@@ -38,6 +38,7 @@ ul {
     padding: 8px 15px;
     border: 1px solid transparent;
     cursor: pointer;
+    /* z-index: 10; */
 }
 
 .btn:hover {
@@ -135,11 +136,21 @@ ul {
     font-size: 17px;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 100;
+}
+
+
 .logo {
     position: relative;
     top: 33%;
     float: left;
     margin-right: 20px;
+    z-index: 10;
 }
 
 .logo img {
@@ -188,7 +199,7 @@ ul {
     position: relative;
 }
 
-.menu-container li .active::before,
+.menu-container .active::before,
 .menu-container li a::before {
     content: "";
     position: absolute;
@@ -200,13 +211,13 @@ ul {
     transition: width 0.3s ease, left 0.3s ease;
 }
 
-.menu-container li .active::before,
+.menu-container .active::before,
 .menu-container li a:hover::before {
     width: 100%;
     left: 0;
 }
 
-.menu-container li .active,
+.menu-container .active,
 .menu-container li a:hover {
     color: var(--ten);
 }
@@ -290,6 +301,7 @@ ul {
     color: #fff;
     font-size: 14px;
     font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
     border-radius: 3px;
     padding: 5px 10px;
     cursor: pointer;
@@ -340,13 +352,29 @@ hr {
 
 .banner {
     position: relative;
-    z-index: -1;
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
 }
 
-.banner img {
-    display: block;
-    width: 100%;
+.banner-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
     height: auto;
+    display: block;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+    pointer-events: none;
 }
 
 .banner-text {
@@ -378,17 +406,23 @@ hr {
     border-radius: 4px;
 }
 
+.banner-text .btn:hover{
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff !important;
+}
+
 /* ----- BANNER CAROUSEL ----- */
 .banner-carousel {
     position: relative;
     width: 100%;
     overflow: hidden;
-    z-index: -1;
 }
 
 .banner-container {
     display: flex;
     transition: transform 0.5s ease;
+    z-index: -1;
 }
 
 .banner {
@@ -447,7 +481,6 @@ hr {
 /* =============== MID BANNER =============== */
 .mid-banner {
     position: relative;
-    z-index: -1;
 }
 
 .mid-banner img {
@@ -480,6 +513,12 @@ hr {
     color: #fff;
     font-size: 16px;
     border-radius: 4px;
+}
+
+.mid-banner-text .btn:hover{
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff !important;
 }
 
 /* ===============END MID BANNER =============== */

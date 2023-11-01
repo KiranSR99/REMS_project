@@ -15,7 +15,7 @@
     <section class="banner-carousel">
         <div class="banner-container">
             <div class="banner">
-                <img src="./assets/images/Background Image.png" alt="">
+                <img class="banner-image" src="./assets/images/resort1.jpg" alt="">
                 <div class="banner-text">
                     <h4>Join with us</h4>
                     <h1>Experience Nature</h1>
@@ -23,18 +23,18 @@
                 </div>
             </div>
             <div class="banner">
-                <img src="./assets/images/Background Image.png" alt="">
+                <img class="banner-image" src="./assets/images/resort2.jpg" alt="">
                 <div class="banner-text">
-                    <h4>Join with us</h4>
-                    <h1>Experience Nature</h1>
+                    <h4>Share the Experience</h4>
+                    <h1>Nature's Delight Awaits You</h1>
                     <a class="btn" href="#">Find Out More</a>
                 </div>
             </div>
             <div class="banner">
-                <img src="./assets/images/Background Image.png" alt="">
+                <img class="banner-image" src="./assets/images/resort4.jpg" alt="">
                 <div class="banner-text">
-                    <h4>Join with us</h4>
-                    <h1>Experience Nature</h1>
+                    <h4>Explore with us</h4>
+                    <h1>Wonders of Nature</h1>
                     <a class="btn" href="#">Find Out More</a>
                 </div>
             </div>
@@ -64,8 +64,8 @@
         <div class="mid-banner">
             <img src="./assets/images/resortInterior 1.png" alt="">
             <div class="mid-banner-text">
-                <h4>Join with us</h4>
-                <h1>Experience the Nature</h1>
+                <h4>Be a part of our story</h4>
+                <h1>Nature's Serenity Awaits</h1>
                 <a class="btn" href="#">Find Out More</a>
             </div>
         </div>

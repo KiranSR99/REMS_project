@@ -18,14 +18,17 @@
             </div>
 
             <div class="footer-column">
-                <h2 class="title-footer">Newsletter</h2>
-                <input type="email" name="email" class="email" placeholder="Enter Your Email"><br>
-                <button class="btn-small" type="submit">Submit</button>
+                <h2 class="title-footer">Social Links</h2>
+                <!-- <input type="email" name="email" class="email" placeholder="Enter Your Email"><br>
+                <button class="btn-small" type="submit">Submit</button> -->
                 <ul class="social-links">
                     <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
-                    <!-- <li><a href="#"><i class="fas fa-"></i></a></li> -->
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <!-- <li><a href="#"><i class="fa-brands fa-threads"></i></i></a></li> -->
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></i></a></li>
+
                 </ul>
             </div>
         </div>

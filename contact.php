@@ -43,7 +43,12 @@ if(isset($_POST['submit'])){
     <?php include './includes/header.php'; ?>
 
     <section>
-        <div class="banner"><img src="./assets/images/FeelParadiseBanner.png" alt=""></div>
+        <div class="banner">
+            <img src="./assets/images/water.jpg" alt="">
+            <div class="banner-text">
+                <h1>Feel the Paradise Alive</h1>
+            </div>
+        </div>
 
         <div class="container">
             <div class="title">

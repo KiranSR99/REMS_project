@@ -29,3 +29,27 @@
         </div>
     </header>
 </main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("scroll", function() {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    });
+
+
+    // JAVASCRIPT TO TOGGLE THE ACTIVE CLASS IN NAVBAR MENUS
+    const currentPage = window.location.href;
+
+    const menuItems = document.querySelectorAll(".menus li a");
+
+    menuItems.forEach(menuItem => {
+        if (menuItem.href === currentPage) {
+            console.log(menuItem.href);
+            menuItem.classList.add('active');
+        } else {
+            menuItem.classList.remove('active');
+        }
+    });
+});
+</script>

@@ -42,27 +42,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function startAutoSlide() {
-        setInterval(slideNext, 3000);
+        setInterval(slideNext, 4000);
     }
 
     prevButton.addEventListener("click", slidePrev);
     nextButton.addEventListener("click", slideNext);
     startAutoSlide();
-
-
-    // JAVASCRIPT TO TOGGLE THE ACTIVE CLASS IN NAVBAR MENUS
-    const menuItems = document.querySelectorAll(".menu-container li a");
-
-    menuItems.forEach(menuItem => {
-        menuItem.addEventListener('click', function () {
-
-            menuItems.forEach(menuItem => {
-                menuItem.classList.remove('active');
-            });
-
-            menuItem.classList.add('active');
-        });
-    });
-
 
 });
