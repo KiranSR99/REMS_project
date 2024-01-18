@@ -4,7 +4,7 @@
 
 :root {
     --sixty: #EFEFEF;
-    --thirty: #0A3454;
+    --thirty: #010c47;
     --ten: #FF7F50;
     --text_color: #565656;
 }
@@ -31,7 +31,7 @@ ul {
 
 .btn {
     background-color: var(--thirty);
-    color: #fff !important;
+    color: #ffffff !important;
     font-size: 16px;
     font-weight: 700;
     border-radius: 3px;
@@ -406,7 +406,7 @@ hr {
     border-radius: 4px;
 }
 
-.banner-text .btn:hover{
+.banner-text .btn:hover {
     background-color: transparent;
     border: 1px solid #fff;
     color: #fff !important;
@@ -515,7 +515,7 @@ hr {
     border-radius: 4px;
 }
 
-.mid-banner-text .btn:hover{
+.mid-banner-text .btn:hover {
     background-color: transparent;
     border: 1px solid #fff;
     color: #fff !important;
